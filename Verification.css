@@ -1,0 +1,42 @@
+body{
+    
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+font-weight: lighter;
+    margin: 0;
+    font-size: 18px;
+    text-align: justify;
+} 
+.verification-container p{
+padding: 20px 20px;
+box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+background-color: white;
+margin-top: 12px;
+margin-left: auto;
+margin-right: auto;
+display: block;
+width: 80%;
+overflow: hidden;
+border-top: 2px solid rgb(0,0,180);
+text-align: justify;
+}
+.verification-container i{
+    margin-right: 10px;
+    color: rgb(0,0,180);
+    cursor: pointer;
+}
+
+.verification-container span{
+    cursor: pointer;
+}
+a:link{
+    text-decoration: none;
+}
+i{
+    cursor: pointer;
+    
+}
+span{
+    cursor: pointer;
+}
