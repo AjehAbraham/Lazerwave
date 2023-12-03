@@ -16,7 +16,7 @@
 #### User can Block and Un-Block their account at anytime
 #### And lots more
 #### check this out at https://9paywave.000webhostapp.com
-### Some info about new version 
+## Some info about new version 
 
 #### Improved user Authentication with 2-Factor Authentication 
 #### Two Factor Authentication when user login
