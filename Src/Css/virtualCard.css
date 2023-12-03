@@ -1,0 +1,81 @@
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        font-size: 13px;
+        
+     
+    } 
+    .top-nav-bar{
+    
+    }
+    .top-nav-bar span{
+      cursor: pointer;
+      font-size: 13px;
+    }
+    
+    .top-nav-bar i{
+      cursor: pointer;
+      font-size: 10px;
+      float: right;
+      margin-top: 4px;
+      margin-right: 5px;
+    }
+    .virtual-card-container{
+      margin: auto;
+      display: block;
+      text-align: center;
+    }
+    .virtual-card-container input[type=number],input[type=number],select{
+    padding: 8px 8px;
+    border-radius: 2rem;
+    font-size: 18px;
+    margin: auto;
+    background-color: #f1f1f1;
+    width: 80%;
+    outline: 0;
+    border: 2px solid #ccc;
+    }
+    .virtual-card-container h1{
+      font-size: 13px;
+    }
+    .virtual-card-container p:nth-child(2){
+      color: red;
+    }
+    
+    .virtual-card-container p:nth-child(3){
+      color: red;
+    }
+    @media screen and (min-width: 600px){
+      
+    .virtual-card-container input[type=number],input[type=number],select{
+      width: 30%;
+    }
+    }
+    .Open-pin{
+      padding: 7px 7px;
+      border-radius: 2rem;
+      text-align: center;
+      background-color: rgb(0,0,56);
+      color: white;
+      margin: auto;
+      width: 65%;
+    cursor: pointer;
+    }
+    @media screen and (min-width: 600px){
+      .Open-pin{
+        width: 33%;
+      }
+    }
+    .Dark-mode{
+     color: white;
+      background-color: rgb(0,0,20);
+    }
+    .Dark-mode i{
+      color: white;
+    }
+    .status-message{
+      color: red;
+      text-align: center;
+    }

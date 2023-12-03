@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.Top_nav_bar{
+
+}
+.Top_nav_bar i{
+    float:right;
+    font-size:11px;
+    margin-top:1px;
+    cursor: pointer;
+}
+.Top_nav_bar span{
+font-size: 13px;
+cursor: pointer;
+}
+.edit-profile-container{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    display: block;
+   
+}
+.Dark-mode{
+    color: white;
+    background-color: rgb(0,0,20);
+}
+.Dark-mode  .edit-profile-container input{
+    background-color: #f1f1f1;
+}
+@media screen  and (min-width: 600px){
+    
+    .edit-profile-container{
+        width: 68%;
+    }
+}
+.edit-profile-container input[type =text],input[type =tel]{
+    margin: auto;
+    width: 90%;
+    font-size: 18px;
+    padding: 8px 8px;
+    border: 1px solid #ccc;
+    display: block;
+    border-radius: 2rem;
+    outline: 0;
+}
+
+@media screen  and (min-width: 600px){
+    .edit-profile-container input[type =text],input[type =tel]{
+        font-size: 13px;
+    }
+
+}
+.edit-profile-container input[type=submit]{
+    margin: auto;
+
+    width: 60%;
+    font-size: 15px;
+    padding: 8px 8px;
+    border: 2px solid #ccc;
+    color: white;
+    background-color: rgb(0,0,56);
+    border: none;
+    display: block;
+   cursor: pointer;
+   border-radius: 2rem;
+}
+.edit-profile-container h1{
+    color: grey;
+    border-bottom: 6px solid rgb(0,52,102);
+}
+.edit-profile-container p{
+    /*color: red;*/
+    text-align: center;
+}
+.edit-profile-container h3{
+    text-align: center;
+    color: green;
+}
+.Dark-mode  .edit-profile-container label{
+    color: white;
+}
+.error_message{
+    color: red;
+}

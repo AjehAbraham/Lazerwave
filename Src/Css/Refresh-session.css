@@ -1,0 +1,104 @@
+
+body{
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+    }
+    .refresh-session-container{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    color: #666;
+    padding: 6px 6px;
+    margin-top: 3%;
+    }
+    
+    @media screen and (min-width: 600px){
+    .refresh-session-container{
+    
+    width: 68%;
+    
+    }
+    
+    }
+     
+    
+    
+    .refresh-session-container input[type=password]{
+    margin: auto;
+    border-radius: 2rem;
+    width: 95%;
+    padding: 8px 8px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    outline: 0px;
+    }
+    
+    @media screen and (min-width: 600px){
+        .refresh-session-container input[type=password]{
+            font-size: 13px;
+        }
+
+    }
+    .refresh-session-container input[type=submit]{
+        border-radius: 2rem;
+    margin: auto;
+    width: 70%;
+    padding: 6px 6px;
+    font-size: 15px;
+    border: none;
+    text-align: center;
+    background-color: mediumseagreen;
+    color: white;
+    cursor: pointer;
+    }
+    
+    .refresh-session-container  p:nth-child(1){
+    padding: 6px 6px;
+    
+    background-color: rgba(0,0,50);
+    color: white;
+    
+    }
+    .refresh-session-container  p:nth-child(2){
+    color: rgb(0,52,102);
+    font-size: 13px;
+    font-weight: bold;
+    
+    }
+    
+    .refresh-session-container  p:nth-child(4){
+    color: red;
+    font-weight: bold;
+    
+    }
+    
+    .refresh-session-container  p:nth-child(5){
+    color: rgb(0,52,102);
+    font-weight: bold;
+    
+    }
+    
+    
+    .refresh-session-container  p:last-child{
+    
+    font-weight: bold;
+    
+    }
+    
+    
+    
+    
+    .refresh-session-container  a:link{
+    color: rgb(0,52,102);
+    text-decoration: none;
+    font-weight: bold;
+    
+    }
+    .refresh-session-container  a:visited{
+    color: rgb(0,52,102);
+    
+    }

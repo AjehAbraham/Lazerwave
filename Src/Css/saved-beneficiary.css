@@ -1,0 +1,97 @@
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        font-size: 13px;  
+        }
+        .Top-nav i{
+            float:right;
+            font-size:13px;
+            margin-top:1px;
+            cursor: pointer;
+            color: #666;
+        }
+        .Top-nav span{
+            font-size:11px;
+            /*margin-top:1px;*/
+            cursor: pointer;
+            color: #666;
+        }
+        .save-beneficairy-container{
+           /* overflow-y: scroll;*/
+        }
+    
+        .save-beneficairy-container h1{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(0,0,56);
+    padding: 5px 5px;
+    
+        }
+    .save-beneficairy-container p{
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    background-color: rgba(0,0,100);
+    }
+    @media screen and (min-width: 600px){
+        .save-beneficairy-container p{
+            width: 50%;
+        }
+    
+    }
+    .save-beneficairy-container p a:link{
+     
+        text-decoration: none;
+        color: white;
+    }
+    
+    .save-beneficairy-container    p:hover{
+        
+        background-color: mediumseagreen;
+    }
+    p:active{
+        background-color: mediumseagreen;
+    }
+    .save-beneficairy-container p input[type=radio]{
+        float: left;
+    }
+    
+    
+    .save-beneficairy-container  input[type=submit]{
+    margin-top: 12px;
+    background-color: rgb(0,0,56);
+    color: white;
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    width: 70%;
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 2rem;
+    cursor: pointer;
+    }
+    @media screen and (min-width: 600px){
+        .save-beneficairy-container  input[type=submit]{
+            width: 30%
+        }
+    }
+    .Dark-mode {
+        background-color: rgb(0,0,20);
+        color: white;
+    }
+    .Dark-mode i{
+        color: white;
+    }
+    .Dark-mode a:link{
+        color: white;
+    }
+    .Dark-mode a:visited{
+        color: white;
+    }
+    .Dark-mode h1{
+        color: white;
+    }

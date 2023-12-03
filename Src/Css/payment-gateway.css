@@ -1,0 +1,159 @@
+
+body{
+
+    margin: 0;
+        font-size: 13px;
+    
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+    
+    .Top_nav_bar{
+    font-size: 11px;
+    }
+    .Top_nav_bar a:link,a:visited{
+      color: #666;
+      text-decoration: none;
+    }
+    .form-container{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    }
+    @media screen and (min-width: 600px){
+      .form-container{
+        width: 80%;
+      }
+    }
+    .form-container h2{
+    
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255,0,0,0.4);
+    color: orange;
+    }
+    .form-container p:nth-child(2){
+    
+    text-align: center;
+    color: #666;
+    
+    }
+    .form-container p:nth-child(3){
+    
+    text-align: center;
+    color: #666;
+    
+    }
+    
+    .form-container p:nth-child(4){
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    
+    }
+    .form-container  img{
+    text-align: center;
+    border-radius: 50%;
+    width: 170px;
+    margin: auto;
+    display: block;
+    height: 170px;
+    border: 3px solid rgb(0,0,56);
+    }
+    
+    
+    .form-container p:nth-child(5){
+    text-align: center;
+    color: rgb(0,0,56);
+    background-color: #f1f1f1;
+    padding: 10px 10px;
+    border: 3px solid transparent;
+    font-size: 16px;
+    }
+    
+    .form-container p:nth-child(6){
+    
+    text-align: center;
+    color: white;
+    background-color: rgb(0,0,56);
+    padding: 10px 10px;
+    border-radius: 2rem;
+    
+    font-family: 'Tilt Prism', cursive;
+    }
+    .form-container  i{
+    
+    color: red;
+    }
+    
+    .form-container p:nth-child(7){
+    color: black;
+    text-align: center;
+    font-family: 'Tilt Prism', cursive;
+    }
+    .Dark-mode .form-container p:nth-child(7){
+      color: white;
+    }
+    .status-message{
+    color: red;
+    text-align: center;
+    }
+    
+    .form-container input[type=text],input[type=email],input[type=number]{
+    padding: 7px 7px;
+    background-color: #f1f1f1;
+    color: rgb(0,0,56);
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    outline: 0px;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+    
+    }
+    .form-container input[type=submit]{
+    
+    padding: 7px 7px;
+    background-color: rgb(0,0,56);
+    color: white;
+    width: 65%;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 2rem;
+    display: block;
+    cursor: pointer;
+    }
+    .form-container label{
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: #666;
+    
+    }
+    @media screen and (min-width: 600px){
+      
+    .form-container input[type=text],input[type=email],input[type=submit]{
+      width: 60%;
+      font-size: 13px;
+    }
+    }
+    .Dark-mode{
+      background-color: rgb(0,0,35);
+      color: white;
+    }
+    .Dark-mode .form-container{
+      color: white
+    }
+    .Dark-mode .form-container input{
+      background-color: #ccc;
+    }
+    .Dark-mode .form-container input[type=submit]{
+      background-color: mediumseagreen;
+    }
+    .Dark-mode .form-container p{
+      color: white;
+    }
+    .Dark-mode .form-container p:nth-child(5){
+      background-color: #ccc;
+    }

@@ -1,0 +1,119 @@
+
+
+body{ 
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.header{
+padding: 5px 5px;
+color: rgb(0,0,180);
+
+}
+.header span{
+color: #666;
+font-size: 13px;
+cursor: pointer;
+}
+.header i{
+margin-top: 5px;
+float: right;
+}
+.header a:link{
+text-decoration: none;
+color: #666;
+}
+.header a:visited{
+color: #666;
+}
+
+.Dark-mode .send-money-container-fluid p{
+   /* background-color: black;
+    color: white;
+    box-shadow: 0px 16px 8px 0px #ccc;*/
+}
+.Dark-mode .send-money-container i{
+    color: white;
+}
+.Dark-mode {
+    background-color: rgb(0,0,20);
+    color: white;
+}
+.Dark-mode .send-money-container-fluid  a:link{
+    color: white;
+}
+.Dark-mode .send-money-container-fluid  a:visited{
+    color: white;
+}
+.Dark-mode .send-money-container-fluid  i{
+    color: green;
+}
+.send-money-container-fluid{
+padding: 5px;
+margin-top: 10px;
+}
+.send-money-container-fluid p{
+padding: 11px 11px;
+background-color: white;
+box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+background-color: rgb(0,0,56);
+color: white
+	}
+    .send-money-container-fluid p:nth-child(1){
+        cursor: pointer;
+    }
+  .acct_no{
+  display: none;
+  }
+
+  .send-money-container-fluid i{
+    color: green;
+  margin-right: 7px;
+  }
+  .send-money-container-fluid a:link{
+  text-decoration: none;
+  color: white;
+  }
+  .send-money-container-fluid a:visited{
+  color: white;
+  }
+  
+    .acct_no a:link{
+      color: white;
+  }
+  .acct_no a:visited{
+      color: white;
+  }
+  
+  h3{
+      border-radius: 2rem ;
+      font-weight: lighter;
+      padding: 9px 9px;
+      color: white;
+      margin: auto;
+      width: 90%;
+      text-align: center;
+      background-color: mediumseagreen;
+  }
+  h3 i{
+      color: black;
+  }
+  h3  a:link{
+      color: white;
+      text-decoration: none;
+  }
+  h3 a:visited{
+      color: white;
+  }/*
+  @media screen only(max-height:600px){
+      
+      h3{
+          
+          width: 60%;
+      }
+  }*/
+  #copy-btn{
+    cursor: pointer;
+    color: white;
+  }

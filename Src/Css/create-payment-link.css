@@ -1,0 +1,284 @@
+body{  
+    margin: 0;
+    font-size: 13px;
+
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:white;
+}
+ /*  .Top-nav-bar i:nth-child(1){
+        float: right;
+    }*/
+    .Top-nav-bar i{
+    font-size: 13px;
+    cursor: pointer;
+    }
+    .form-container{
+    margin: auto;
+    width: 99%;
+    
+    }
+ @media screen and (min-width: 600px){
+  .form-container{
+    width: 100%;
+    
+  }
+ }
+    .form-container i:nth-child(2){
+    float: right;
+    margin-top: 5px;
+    color: rgb(0,0,180);
+    
+    }
+    .form-container h2{
+    text-align: center;  
+    }
+   
+     .form-container p:nth-child(3){
+    color: #444;
+    text-align: center;
+    
+    }
+      .form-container img{
+    
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 4px solid rgb(0,0,56);
+    margin: auto;
+    display: block;
+    }
+    .form-container p:nth-child(4){
+    color: white;
+    text-align: center;
+    background-color: rgb(0,0,56);
+    margin: auto;
+    width: 30%;
+    border-radius: 2rem;
+    padding: 10px 10px;
+    font-weight: bold;
+    cursor: pointer;
+font-size: 13px;
+    }
+    @media screen and (min-width: 600px){
+        .form-container p:nth-child(4){
+            width: 20%;
+        }
+    }
+    
+    .form-container p:nth-child(4) a:link{
+        color: white;
+        text-decoration: none;
+    }
+    .form-container p:nth-child(4) a:visited{
+        color: white;
+    }
+
+.form-container input[type=text],input[type=number],select,textarea{
+
+padding: 10px 10px;
+background-color: #f1f1f1;
+color: rgb(0,0,56);
+width: 95%;
+margin: auto;
+font-size: 18px;
+outline: 0px;
+border-radius: 2rem;
+border: 3px solid transparent;
+display: block;
+}
+@media screen and (min-width: 600px){
+  .form-container input[type=text],input[type=number],select,textarea{
+    font-size: 13px;
+  }
+}
+.form-container label{
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    display: block;
+}
+.form-container input[type=submit]{
+padding: 7px 7px;
+background-color: rgb(0,0,56);
+color: white;
+width: 70%;
+margin: auto;
+font-size: 15px;
+outline: 0px;
+border-radius: 2rem;
+border: 3px solid transparent;
+display: block;
+cursor: pointer;
+}
+@media screen and (min-width: 600px){
+    .form-container input[type=submit]{
+        width: 50%;
+    }
+}
+.form-container label{
+color: #666;
+
+}
+
+
+  
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 20px;
+ float: left;
+ margin-left: 5px;
+ text-align: justify;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: rgb(0,0,56);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.container-fliud-class{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  transition: 0.1s;
+  background-color: white;
+  color: black;
+  
+            }
+            .container-fliud-class p:nth-child(1){
+              text-align: center;
+              font-size: 15px;;
+  
+            }
+            .container-fliud-class p:nth-child(2){
+              text-align: center;
+              border: 2px solid #ccc;
+              background-color: #f1f1f1;
+              padding: 7px 7px;
+            }
+            .container-fliud-class p:nth-child(3){
+              cursor: pointer;
+              margin: auto;
+              width: 5%;
+              text-align: center;
+              padding: 5px 5px;
+              color: black;
+            }
+            .container-fliud-class p:nth-child(4){
+              padding: 5px 5px;
+              cursor: pointer;
+              margin: auto;
+              width: 5%;
+              text-align: center;
+              background-color: ;
+            }
+            .container-fliud-class p:nth-child(6){
+              padding: 8px 8px;
+              background-color: mediumseagreen;
+              color: white;
+              border-radius: 2rem;
+              width: 60%;
+              margin: auto;
+              font-size: 15px;
+              text-align: center;
+              cursor: pointer;
+            }
+  
+            .Dark-mode  .container-fliud-class{
+              background-color: rgb(0,0,56);
+              color: white;
+            }
+            .Dark-mode   .container-fliud-class p:nth-child(2){
+              color: white;
+              background-color: #ccc;
+              border: 2px solid #f1f1f1;
+            }
+            .Dark-mode   .container-fliud-class p:nth-child(3){
+              color: white;
+            }
+            .Dark-mode   .container-fliud-class p:nth-child(4){
+              color: white;
+            }
+.Dark-mode{
+    color: white;
+    background-color: rgb(0,0,20);
+}
+
+.Dark-mode .form-container i{
+    color: white;
+}
+.Dark-mode .form-container span{
+    color: white;
+}
+
+.Dark-mode .form-container{
+    background-color: black;
+    color: white;
+}
+.Dark-mode .form-container label{
+    color: white;
+}
+.Dark-mode .form-container input,textarea{
+    background-color: #ccc;
+}
+
+.Dark-mode  .Top-nav-bar i{
+    color: white;
+}
+.Dark-mode input:checked + .slider{
+    background-color: green;
+}
+.Dark-mode .form-container input[type=submit]{
+  background-color: mediumseagreen;
+}

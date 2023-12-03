@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.All-link-container{
+
+width: 100%;
+margin: auto;
+text-align: center;
+color: #666;
+
+}
+.All-link-container p:nth-child(1){
+background-color: rgb(0,0,56);
+padding: 8px 8px;
+margin: auto;
+text-align: center;
+color: white;
+
+}
+.All-link-container table{
+width: 100%;
+color: #444;
+text-align: center;
+}
+.All-link-container th{
+font-weight: bold;
+}
+.All-link-container tr:nth-child(even){
+background-color: #f1f1f1;
+color: black;
+}
+.Dark-mode{
+background-color: rgb(0,0,20);
+color: white;
+}
+.Dark-mode table{
+color: white;
+
+}
+.Dark-mode tr:nth-child(even){
+background-color: #555;
+color: white;
+}
+.Dark-mode table a:link,a:visited{
+    color: red;
+}
+a:link,a:visited{
+    color: red;
+}

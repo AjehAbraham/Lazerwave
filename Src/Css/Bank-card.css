@@ -1,0 +1,144 @@
+
+body{
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bank-card-container{
+    background-color: rgb(0,0,56);
+    color: white;
+    margin: 0;
+    padding: 2px 2px;
+    margin-bottom: 2px;
+}
+.bank-card-container h1{
+    text-align: center;
+    font-weight: lighter;
+font-size: 13px;
+}
+.bank-card-container i{
+        font-size: 10px;
+}
+.bank-card-container span{
+        font-size: 13px;
+}
+.bank-card-container i{
+    margin-right: 12px;
+}
+.bank-card-container a:link{
+    color: white;;
+}
+.bank-card-container a:visited{
+    color: white;
+}
+.saved-cards{
+    background-color: white;
+    padding: 3px 3px;
+/*border-radius: 2rem;*/
+    margin-bottom: 10px;
+    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2); 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+    text-align: center;
+  
+}
+@media screen  and(min-width:600px){
+    .saved-cards{
+        width: 70%;
+    }
+}
+.saved-cards i{
+    margin-left: 10px;
+}
+.saved-cards img{
+    margin-top: 10px;
+}
+.saved-cards a:link{
+    color: white;
+    text-decoration: none;
+}
+.saved-cards a:visited{
+    color: white;
+}
+.saved-cards p:nth-child(4){
+    border-radius: 2rem;
+    /*float: right;*/
+    color: white;
+    padding: 6px 6px;
+    background-color: rgb(0,0,56);
+    width: 40%;
+    /*margin-bottom: 100px;*/
+}
+@media screen and (min-width: 600px){
+        .saved-cards p:nth-child(4){
+                width: 20%;
+        }
+
+}
+.add-card{
+    background-color: rgb(0,0,180);
+    padding: 5px 5px;
+    border-top: 2px solid #ccc;
+    margin-bottom: 10px;
+    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2); 
+    color: white;
+    text-align: center;
+}
+.add-card i{
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+.add-card a:link,a:visited{
+    color: white;
+    text-decoration: none;
+}
+.add-card-information{
+    overflow-y: scroll;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    transition: 0.2s;
+}
+.add-card-information h1{
+    text-align: center;
+    color: rgb(0,0,180);
+    font-size: 18px;
+    font-weight: lighter;
+}
+.add-card-information span{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: rgb(0,0,180);
+}
+.add-card-information i{
+    color: gold;
+}
+
+.Dark-mode {
+    background-color: rgb(0,0,20);
+    color: white;
+}
+.Dark-mode .saved-cards {
+   background-color: rgb(0,0,56); 
+   color: white;
+    
+}
+.Dark-mode .saved-cards p:nth-child(2){
+    color: white;
+    border: 2px solid white ;
+}
+.Dark-mode .add-card{
+    color: white;
+    background-color: rgb(0,0,56);
+}

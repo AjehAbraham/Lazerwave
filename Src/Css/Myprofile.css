@@ -1,0 +1,439 @@
+body{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin: 0;
+    font-size: 13px;
+    
+    }
+    
+    .Dark-mode span{
+    color: white;
+    }
+    .Dark-mode i{
+    color: white;
+    }
+    .Dark-mode i  a:link{
+    color: white;
+    }
+    .Dark-mode i a:visited{
+    color: white;
+    }
+    
+    .Dark-mode .upload-option-overlay{
+        background-color: rgb(0,0,20);
+     color: white;
+    }
+    .Dark-mode .upload-option-overlay i{
+     
+     color: white;
+    }
+    .Dark-mode .upload-option-overlay p{
+      color: white;
+    }
+    .Dark-mode .upload-option-overlay span{
+     color: white;
+    }
+    
+    .Dark-mode{
+        color: white;
+        background-color: rgb(0,0,20);
+    }
+    .Dark-mode .Verificastion-container-overlay{
+        color: white;
+        background-color: rgb(0,0,20);
+    }
+    
+    .Dark-mode input[type=submit]{
+        color: #666 ;
+    }/*
+    .Dark-mode i{
+        color: #666;
+    }
+    .Dark-mode span{
+        color: #666;
+    }*/
+    .Dark-mode a:link{
+        color: white;
+    }
+    .Dark-mode a:visited{
+        color: white;
+    }
+    .Dark-mode .verification-container{
+        color: white;
+        background-color: rgb(0,0,20);
+    
+    }
+    
+    .Dark-mode input[type=text]{
+        background-color: #f1f1f1;
+    }
+    .Dark-mode input[type=email]{
+        background-color: #f1f1f1;
+    }
+    
+    .Dark-mode input[type=number]{
+        background-color: #f1f1f1;
+    }
+    .Dark-mode input[type=tel]{
+        background-color: #f1f1f1;
+    }
+    
+    
+    .Dark-mode .form-container h1{
+        color: white;
+    }
+    .profile-picture-container .open-upload-btn {
+    color: white;
+    width: 30%;
+    } 
+    @media screen and (min-width: 600px){
+        .profile-picture-container .open-upload-btn {
+    width: 15%;
+    margin-left: -10px;
+    }   
+    }
+    
+    @media screen and (min-width: 600px){
+        .profile-picture-container{
+            margin-left: 14px
+        }
+    }
+    .profile-picture-container p{
+        color: white;
+    }
+    i{
+    cursor: pointer;
+    
+    }
+    span{
+    cursor: pointer;
+    }  
+    .profile-picture-container img{
+    border: 5px solid rgb(0,52,102);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    }
+    .profile-picture-container p{
+    color: rgb(0,0,180);
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    }
+    
+    .edit-profile{
+    margin-top: 20px;
+    margin-bottom: 22px;
+    width: 40%;
+    background-color: rgb(0,52,102);
+    color: white;
+    padding: 7px 7px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    }
+    @media screen and (min-width: 600px){
+    
+        .edit-profile{
+            width: 20%;
+        }
+    }
+    .form-container{
+    width: 95%;
+    display: block;
+    margin: auto;
+    }
+    @media screen and (min-width: 600px){
+        .form-container{
+            width: 60%;
+           /* float: left;*/
+           margin-left: 7px;
+        }  
+    }
+    .form-container h1{
+    text-align: center;
+    color: rgb(0,0,180);
+    font-size: 15px;
+    /* font-weight: lighter;*/
+    }
+    .form-container p{
+    float: right;
+    padding: 10px 10px;
+    width: 20%;
+    color: white;
+    background-color: rgb(0,0,180);
+    text-align: center;
+    font-size: 13px;
+    }
+    input[type =text],input[type=number],input[type=password],select,input[type=tel],input[type=email]{
+        outline: 0;
+    width: 90%;
+    font-size: 13px;
+    padding: 7px 7px;
+    border: 2px solid #ccc;
+    display: block;
+    border-radius: 2rem;
+    background-color: #f1f1f1;
+    font-size: 13px;
+    outline: 0px;
+    }
+    
+    @media screen  and(min-width:600px){
+    .form-container{
+        width: 60%;   
+        
+    }
+    }
+    .Dark-mode input[type=text],input[type=email],input[type=number],select{
+    background-color: #f1f1f1;
+    }
+    label{
+    margin-bottom: 23px;
+    font-size: 13px;
+    
+    }
+    .upload-option-overlay{
+    width: 0%;
+    bottom: 0;
+    top: 60%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.1s;
+    z-index: 1;
+    border-top: 2px solid #ccc;
+    }
+    
+    .upload-option-overlay input[type=submit]{
+    margin-bottom: 20px;
+    width: 63%;
+    background-color: rgb(0,0,56);
+    color: white;
+    border-radius: 2rem;
+    margin: auto;
+    display: block;
+    padding: 6px 6px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    }
+    @media screen and (min-width: 600px){
+        .upload-option-overlay input[type=submit]{
+            width: 30%;
+        }
+    }
+    .upload-option-overlay p{
+    text-align: center;
+    padding: 7px 7px;
+    color: rgb(0,52,102);
+    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+    }
+    .upload-option-overlay i{
+    margin-right: 12px;
+    color: rgb(0,0,180);
+    }
+    .upload-option-overlay span{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: rgb(0,0,180);
+    cursor: pointer;
+    }
+    
+    
+    .copy-account-no{
+    margin-bottom: 12px;
+    }
+    
+    .copy-account-number-message{
+    visibility: hidden;
+    }
+    .copy-account-no .copy-account-number-message a:hover{
+    
+    visibility: visible;
+    }
+    
+    .more-infromation {
+    display: none;
+    }
+    .more-infromation h4{
+    cursor: pointer;
+    padding: 10px 10px;
+    width: 25%;
+    background-color: red;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    }
+    a:link{
+    text-decoration: none;
+    color: white;
+    }
+    a:visited{
+    color: white;
+    }
+    h4{
+    width: 40%;
+    padding: 10px 10px;
+    color: white;
+    background-color: rgba(255,0,0,0.4);
+    text-align: center;
+    }
+    @media screen and (min-width: 600px){
+    
+    h4{
+        width: 45%;
+    }
+    }
+    
+    .verify-email{
+    width: 80%;
+    margin-bottom: 25px;
+    cursor: pointer;
+    }
+    
+    .verificastion-container-overlay{
+    overflow-y: scroll;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    /* z-index: 2;*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    transition: 0.2s;
+    overflow: scroll;
+    
+    }
+    .verification-container{
+    margin-top: -50%;
+    background-color: white;
+    text-align: center;
+    padding: 15px 15px;
+    margin: auto;
+    /*/position: fixed;*/
+    font-size: 13px;
+    } 
+    .verification-container h5{
+    font-weight: lighter;
+    
+    }  
+    
+    .verification-container i{
+    
+    cursor: pointer;
+    
+    }  
+    .verification-container input[type=submit]{
+    width: 60%;
+    background-color: rgb(0,0,56);
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    padding: 7px 7px;
+    }
+    
+    .verification-container input[type=number]{
+    width: 60%;
+    border-radius: 2rem;
+    margin: auto;
+    display: block;
+    font-size: 18px;
+    }
+    .request_top_btn{
+    
+    background-color: rgba(0,0,56);
+    color: white;
+    text-align: center;
+    padding: 6px 6px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    
+    }
+    .open-upload-btn{
+    background-color: rgb(0,0,52);
+    color: white;
+    padding: 7px 7px;
+    width: 40%;
+    border-radius: 2rem;
+    font-size: 13px;
+    /*
+    margin: auto;
+    display: auto;*/
+    }
+    @media screen and (min-width: 600px){
+        .open-upload-btn{
+            width: 20%;
+           
+        }
+    }
+    
+    
+    
+    .additional-informaton p:nth-child(1){
+    margin: auto;
+    display: block;
+    width: 65%;
+    background-color: rgb(0,52,102);
+    color: white;
+    padding: 7px 7px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2rem;
+    }
+    @media screen and (min-width: 600px){
+        .additional-informaton p:nth-child(1){
+            width: 30%;
+        }
+      
+    }
+    
+    .additional-informaton p:nth-child(2){
+    margin: auto;
+    width: 65%;
+    background-color: #f1f1f1;
+    color: rgb(0,0,180);
+    display: block;
+    padding: 7px 7px;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid rgb(0,52,102);
+    border-radius: 2rem
+    }
+    
+    @media screen and (min-width: 600px){
+        .additional-informaton p:nth-child(2){
+            width: 30%;
+        }
+      
+    }
+    #Home-btn{
+        float:right;
+        margin-top:1px;
+          font-size:13px;
+          color: #666;
+    }
+    .Dark-mode #Home-btn{
+        color: white;
+    }
+
+   .Dark-mode .verificastion-container-overlay {
+
+background-color: rgb(0,0,20);
+   }
+    
+   .Dark-mode .verification-container{
+background-color: rgb(0,0,20);
+
+    }

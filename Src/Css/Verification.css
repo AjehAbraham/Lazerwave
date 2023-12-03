@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    font-size: 13px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.verification-container{
+    color: white;
+}
+.verification-container a:link,A:visited{
+color: #666;
+    text-decoration: none;
+}
+.verification-container i{
+    
+float:right;
+font-size:11px;
+margin-top:1px;
+cursor: pointer;
+}
+
+.verification-container span{
+    font-size:13px;
+  cursor: pointer;
+    }
+
+.form-container{
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #666;
+}
+@media screen and (min-width:600px){
+    
+    .form-container{
+        width: 68%;
+    }
+}
+
+.form-container h1{
+    color: rgb(0,0,180);
+    font-size: 15px;
+}
+.Dark-mode .form-conatiner input{
+background-color: #f1f1f1;
+}
+.form-container input[type =text],input[type=password],input[type=date],select{
+    margin: auto;
+    width: 80%;
+    font-size: 18px;
+    padding: 8px 8px;
+    border: 1px solid #ccc;
+    display: block;
+    border-radius: 2rem;
+    background-color: #f1f1f1;
+    outline: 0px;
+}
+
+@media screen and (min-width:600px){
+    .form-container input[type =text],input[type=password],input[type=date],select{
+        font-size: 13px;
+    }
+}
+.form-container input[type=submit]{
+    margin: auto;
+    width: 65%;
+    font-size: 15px;
+    padding: 7px 7px;
+    border: none;
+    background-color: rgb(0,0,56);
+    color: white;
+    border-radius: 2rem;
+}
+
+@media screen  and(min-width: 600px){
+    
+    .form-container input{
+        
+        width: 50%;
+    }
+}
+.form-container a:link{
+    color: black;
+}
+.form-container a:visited{
+    color: black;
+}
+ .form-container  p{
+    font-weight: bold;
+    color: red;
+  }
+  .form-container h2{
+    text-align: center;
+    color: rgb(0,52,102);
+    font-size: 18px;
+  }
+  .error_message{
+    text-align: center;
+  }
+.Dark-mode{
+    background-color: rgb(0,0,20);
+    color: white;
+}
+  .Dark-mode .form-container {
+    background-color: rgb(0,0,20);
+    color: white;
+}
+.Dark-mode .form-container i{
+    color: white;
+}
+.Dark-mode .form-container  label{
+    color: white;
+}
+.Dark-mode .form-container h1{
+    color: white;
+}
+.Dark-mode .verification-container{
+    color: white;
+}

@@ -1,0 +1,223 @@
+
+body{
+    margin: 0;
+    font-size: 13px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Top-nar-bar i{
+  float:right;
+  font-size:11px;
+  margin-top:1px;
+  cursor: pointer;
+}
+.Top-nar-bar span{
+font-size: 13px;
+cursor: pointer;
+
+}
+.Top-nar-bar a:link{
+  color: #666;
+}
+
+.Top-nar-bar a:visited{
+  color: #666;
+}
+.Top-nar-bar {
+  color: #666;
+}
+
+.Airtime-container{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin: auto;
+    display: block;
+    width: 94%;
+  /*  background-color: white;
+    padding: 5px 5px;*/
+   /* border-radius: 2rem;
+    box-shadow: 10px 16px 8px 10px rgba(0,52,102);*/
+    color: grey;
+}
+@media screen  and (min-width: 600px){
+    .Airtime-container {
+        width: 68%;
+    }
+}
+.Airtime-container input[type=number]{
+    margin: auto;
+   width: 90%;
+   padding: 8px 8px;
+   border: 2px solid #ccc;
+   font-size: 18px;
+   background-color: #f1f1f1;
+   border-radius: 2rem;
+   outline: 0px;
+}
+
+.Airtime-container input[type=tel],input[type=number]{
+  margin: auto;
+   width: 90%;
+   padding: 8px 8px;
+   border: 2px solid #ccc;
+   font-size: 18px;
+   background-color: #f1f1f1;
+   border-radius: 2rem;
+   outline: 0px;
+}
+
+.Airtime-container select{
+  margin: auto;
+   width: 90%;
+   padding: 8px 8px;
+   border: 2px solid #ccc;
+   font-size: 18px;
+   background-color: #f1f1f1;
+   border-radius: 2rem;
+   outline: 0px;
+
+}
+@media screen and (min-width: 600px){
+  .Airtime-container input[type=tel],input[type=number],select{
+    font-size: 13px;
+  }
+}
+.Airtime-container input[type=submit]{
+  color: white;
+  font-size: 15px;
+    margin-right: 20px;
+ /*   margin-left: auto;*/
+   width: 60%;
+   padding: 8px 8px;
+   border: none;
+   font-size: 16px;
+   background-color: rgb(0,0,52);
+   color: white;
+   margin-top: 12px;
+   margin-bottom: 20px;
+border-radius: 2rem;
+}
+
+.Airtime-container img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(0,0,52);
+    font-size: 40px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+.Airtime-container p{
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+.Airtime-container h1{
+ 
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 6px solid rgb(0,0,52);
+    color: gray;
+}
+.open-tarnsaction-btn{
+padding: 10px 10px;
+background-color: rgb(0,0,56);
+color: white;
+width: 50%;
+cursor: pointer;
+border-radius: 2rem;
+font-size: 15px;
+}
+.verify-data{
+
+  background-color: skyblue;
+  cursor: pointer;
+  color: white;
+  border-radius: 2rem;
+  width: 65%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding: 8px 8px;
+}
+.container-container-fluid{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: transparent;
+z-index: 2;
+}
+.box-container-fluid{
+position: fixed;
+top: 50%;
+left: 0;
+right: 0;
+bottom: 0;
+  background-color: #f1f1f1;
+color: #444;
+overflow-y: scroll;
+padding-top: 2px;
+}
+.box-container-fluid b:nth-child(1) i{
+  cursor: pointer;
+  color: red;
+  text-align: center;
+  margin: auto;
+  display: block
+}
+.box-container-fluid p b{
+  float: right;
+}
+.box-container-fluid p:nth-child(2){
+
+
+}
+.box-container-fluid p img{
+  border: 2px solid #777;
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+}
+.box-container-fluid p:nth-child(7){
+  background-color: mediumseagreen;
+  cursor: pointer;
+  color: white;
+  border-radius: 2rem;
+  width: 65%;
+  margin: auto;
+  text-align: center;
+  padding: 8px 8px;
+  display: block;
+}
+.Dark-mode  .box-container-fluid{
+  background-color: rgb(0,0,56);
+  color: white;
+
+}
+.Dark-mode{
+  background-color: rgb(0,0,20);
+    color: white;
+}
+.Dark-mode .Airtime-container {
+    background-color: rgb(0,0,20);
+}
+.Dark-mode .Airtime-container h1{
+  border-bottom: 2px solid white;
+}
+.Dark-mode .Top-nar-bar{
+  color: white;
+}
+.Dark-mode .Top-nar-bar a:link{
+  color: white;
+}
+
+.Dark-mode .Top-nar-bar a:visited{
+  color: white;
+}

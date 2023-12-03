@@ -1,0 +1,81 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin: 0;
+    font-size: 13px;
+
+  }
+  .Top_nav_bar{
+
+  }
+ .Top_nav_bar i {
+    float:right;
+    margin-top:2px;
+    font-size:11px;
+    cursor: pointer;
+  }
+  .Top_nav_bar span{
+font-size: 13px;
+cursor: pointer;
+  }
+  .Top_nav_bar a:link.a:visited{
+
+  }
+  .block-account-container{
+    text-align: center;
+
+  }
+  .block-account-container h1{
+    font-size: 15px;
+    color: rgb(0,0,100);
+  }
+  .block-account-container p:nth-child(3){
+    padding: 8px 8px;
+    background-color: rgb(0,0,56);
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 66%;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 600px){
+    .block-account-container p:nth-child(3){
+      width: 30%;
+    }
+  } 
+  table{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    
+  }
+  tr{
+    color: #666;
+  }
+  tr:nth-child(even){
+    background-color: #ccc;
+  }
+  th{
+    color: black;
+    width: 30%;
+
+  }
+  .Dark-mode{
+    color: white;
+    background-color: rgb(0,0,20);
+  }
+  .Dark-mode  .block-account-container h1{
+    color: white;
+  }
+  
+  .Dark-mode  .block-account-container p:nth-child(3){
+  }
+  .Dark-mode th{
+    color: white;
+  }
+  .Dark-mode tr:nth-child(even){
+    background-color: #ccc;
+    color: black;
+  }
