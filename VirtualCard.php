@@ -31,24 +31,10 @@
 <!-- end of ajax link -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
-
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
-      <div class="top-nav-bar">
-          
-        <span class="material-symbols-outlined" 
-        onclick="window.history.back()">arrow_back</span>
-         
-        <a href="dashboard-home"><i class="fa fa-home"></i>
-         </a> 
-</div>
+     <?php require_once "default_sidebar.php";?>
 
       <div class="virtual-card-container">
 

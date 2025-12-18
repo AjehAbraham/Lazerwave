@@ -6,28 +6,6 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.Top-nar-bar i{
-  float:right;
-  font-size:11px;
-  margin-top:1px;
-  cursor: pointer;
-}
-.Top-nar-bar span{
-font-size: 13px;
-cursor: pointer;
-
-}
-.Top-nar-bar a:link{
-  color: #666;
-}
-
-.Top-nar-bar a:visited{
-  color: #666;
-}
-.Top-nar-bar {
-  color: #666;
-}
-
 .Airtime-container{
     margin-top: 20px;
     margin-bottom: 10px;
@@ -92,7 +70,7 @@ cursor: pointer;
    padding: 8px 8px;
    border: none;
    font-size: 16px;
-   background-color: rgb(0,0,52);
+   background-color: rgb(0,0,56);
    color: white;
    margin-top: 12px;
    margin-bottom: 20px;
@@ -135,7 +113,7 @@ font-size: 15px;
 }
 .verify-data{
 
-  background-color: skyblue;
+  background-color: rgb(0,0,56);
   cursor: pointer;
   color: white;
   border-radius: 2rem;
@@ -151,7 +129,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: transparent;
+background-color: #ccc;
 z-index: 2;
 }
 .box-container-fluid{

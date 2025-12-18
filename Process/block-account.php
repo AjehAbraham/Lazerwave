@@ -31,7 +31,7 @@ if(isset($_POST["status"]) && !empty($_POST["status"])){
 
 $status = htmlspecialchars($_POST["status"]);
 
-if($status == "Block" or $status == "Unblock"){
+/*if($status == "Block" or $status == "Unblock"){
 
 
 
@@ -39,12 +39,13 @@ if($status == "Block" or $status == "Unblock"){
   
 
 }else{
+
   die("Error Fetching status");
   
 
 
 }
-
+*/
 
 }else{
 
@@ -53,7 +54,7 @@ if($status == "Block" or $status == "Unblock"){
 }
 
 
-  $date = date("Y/m/d");
+  $date = date("Y/m/d H:i:s");
   $time = date("H:i:s");
 
 
@@ -133,6 +134,42 @@ if (password_verify($transaction_pin,$UserPid["Pin"]) == "password_hash"){
   
 require_once "db_connection.php";
 
+
+
+//CHECK USER PREVOIUS ACCOUNT STATUS//
+
+$block = "SELECT * FROM Block_account WHERE User_id='$_SESSION[New_user]' ORDER BY id DESC LIMIT 1";
+
+$Results = mysqli_query($conn,$block);
+
+if(mysqli_num_rows($Results) > 0){
+
+
+  $acctStatus = mysqli_fetch_assoc($Results);
+
+  if($acctStatus["Account_status"] == "Block"){
+
+
+    $status = "Unblock";
+
+  }elseif($acctStatus["Account_status"] == "Unblock"){
+
+
+    $status = "Block";
+
+  }else{
+
+
+    $status = "disabled";
+  }
+
+}else{
+
+
+  $status = "Block";
+
+}
+
 $insert = "INSERT INTO Block_account (User_id	,Account_status,Date,Ip_addr,User_agent)
 
 VALUES('$_SESSION[New_user]','$status','$date','$ip','$user_agent')
@@ -155,7 +192,7 @@ VALUES('$_SESSION[New_user]','$status','$date','$ip')
 if(mysqli_query($conn,$insert_record)){
 
 
-  die("<b style='color: mediumseagreen;'>Account ".$status. " successful</b>");
+  die($status);
   
 }else{
 

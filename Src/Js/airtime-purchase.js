@@ -1,16 +1,10 @@
 
 function Open_pin_box(){
-    
     document.querySelector(".Transaction-pin-overlay").style.display = "block";
-  
   }
   
   function CloseTransaction_pin(){
-  
-  
     document.querySelector(".Transaction-pin-overlay").style.display = "none";
-  
-  
   }
   
   

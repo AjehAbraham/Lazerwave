@@ -1,28 +1,11 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-size: 13px;
-       
-      
+      font-size: 13px; 
   }
-    
-.Top-nav-bar{
-display: inline;
-}
-
-.Top-nav-bar b:nth-child(1){
-font-size: 9px;
-}
-
-.Top-nav-bar b:nth-child(2){
-float: right;
-}
-.Top-nav-bar a:link,a:visited{
-  color: #222;
-  text-decoration: none;
-}
+   
   .form-container-fluid{
-  color: rgb(0,0,100);
+  color: black;
   padding: 8px 8px;
   margin-bottom: 10px;
   font-size: 13px;
@@ -58,9 +41,6 @@ color: rgb(0,52,180);
   text-align: center;
   }
   .form-container-fluid input[type=radio]{
- /* border: 0px;
-      width: 4%;
-      height: 2em;*/
       border: 2px solid red;
   }
   @media screen and (min-width: 600px){
@@ -70,10 +50,6 @@ color: rgb(0,52,180);
       }
       
   }
-  
-  
-  
-  
   
   .form-container-fluid input[type=submit]{
   border: none;
@@ -89,8 +65,6 @@ color: rgb(0,52,180);
   cursor: pointer;
   }
   
-  
-  
   @media  screen and (min-width: 600px){
   .form-container-fluid {
   width: 60%;
@@ -100,7 +74,6 @@ color: rgb(0,52,180);
   font-weight: bold;
   background-color: ;
   border-radius: 2rem;
- 
   font-size: 13px;
   }
   .form-container-fluid a:link{
@@ -108,41 +81,26 @@ color: rgb(0,52,180);
   }
   
   }
-  /*
-  FOR MOBILE*/
-  @media screen and (min-width: 768px) {
-  .form-container-fluid {
-  
-  }
-  
-  }
   
   .form-container-fluid a:link{
   text-decoration: underline;
   color: red;
-  
-  
   }
   .form-container-fluid a:visited{
   color: red;
-  
-  
   }
   
  /* The container must be positioned relative: */
 .custom-select {
 position: relative;
-font-family: Arial;
-
+/*font-family: Arial;*/
 margin: auto;
 width: 80%;
 }
 
 .custom-select select {
 display: none; /*hide original SELECT element: */
-
 }
-
 .select-selected {
 background-color: mediumseagreen;
 border-radius: 2rem;
@@ -201,7 +159,26 @@ background-color: rgba(0, 0, 0, 0.1);
     }
   }
   
-  
+.validate-data-container{
+  margin-bottom: -20px;
+  margin-top: -10px;
+  margin-left: 2px;
+  }
+  @media screen and (min-width: 600px){
+    .validate-data-container{
+      margin-left: 410px;
+    } 
+  }
+  .validate-data-container h1{
+    font-size: 17px;
+    text-align: center;
+  }
+  .validate-data-container p{
+    color: red;
+  }
+  .validate-data-container i{
+    font-size: 17px;
+  }
 .error_message{
   text-align: center;
   color: red;

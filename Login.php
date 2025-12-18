@@ -49,22 +49,13 @@ exit;
 
 <!-- end of ajax link -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
     
       <?php
 
 //CHECK COOKIE POPUP//
-
 if(isset($_COOKIE["uniqueID"]) && $_COOKIE["SessionID"] && isset($_COOKIE["status"])){
 
 
@@ -76,6 +67,7 @@ if(isset($_COOKIE["uniqueID"]) && $_COOKIE["SessionID"] && isset($_COOKIE["statu
 require_once "cookie-banner.php";
   
 }
+require_once "default_sidebar.php";
 ?>
       
 <noscript>
@@ -103,7 +95,7 @@ require_once "cookie-banner.php";
       }
       </style>
       
-    </noscript>;
+    </noscript>
 
 
 
@@ -140,10 +132,10 @@ require_once "cookie-banner.php";
 
 
 <div class="sign-in">
-<a href="Register"><input type="submit" value="Sign in" ></a></div>
+<a href="create-account"><input type="submit" value="Sign in" ></a></div>
 
 
-<p class="password-reset"><a href="Reset-password">Forgot password ?</a></p>
+<p class="password-reset"><a href="reset-password">Forgot password ?</a></p>
 
 </div>
 

@@ -31,20 +31,12 @@ require_once "sessionPage.php";
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.3.min.js"></script>
 
 <!--END OF TEXT AREA -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 
 <title>Payment link History</title>
 </head>
 <body>
-
+<?php require_once "default_sidebar.php"; ?>
 <div class='All-link-container'>
 
 

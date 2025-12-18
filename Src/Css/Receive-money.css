@@ -1,33 +1,8 @@
-
-
 body{ 
     margin: 0;
     font-size: 13px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
 }
-.header{
-padding: 5px 5px;
-color: rgb(0,0,180);
-
-}
-.header span{
-color: #666;
-font-size: 13px;
-cursor: pointer;
-}
-.header i{
-margin-top: 5px;
-float: right;
-}
-.header a:link{
-text-decoration: none;
-color: #666;
-}
-.header a:visited{
-color: #666;
-}
-
 .Dark-mode .send-money-container-fluid p{
    /* background-color: black;
     color: white;
@@ -86,34 +61,29 @@ color: white
       color: white;
   }
   
-  h3{
+  .send-money-container-fluid h3{
       border-radius: 2rem ;
       font-weight: lighter;
       padding: 9px 9px;
-      color: white;
+    
       margin: auto;
       width: 90%;
       text-align: center;
-      background-color: mediumseagreen;
   }
-  h3 i{
+  .send-money-container-fluid h3 i{
       color: black;
   }
-  h3  a:link{
+  .send-money-container-fluid h3  a:link{
       color: white;
       text-decoration: none;
   }
-  h3 a:visited{
+  .send-money-container-fluid h3 a:visited{
       color: white;
-  }/*
-  @media screen only(max-height:600px){
-      
-      h3{
-          
-          width: 60%;
-      }
-  }*/
-  #copy-btn{
+  }
+  .send-money-container-fluid  #copy-btn{
     cursor: pointer;
+    color: rgb(0,0,56);
+  }
+  .Dark-mode #copy-btn{
     color: white;
   }

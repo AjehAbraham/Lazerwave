@@ -82,24 +82,6 @@ var mode = Checkmode();
 
 document.querySelector(".view-referal").addEventListener("click",openHistory);
 
-function openHistory(){
-
-document.querySelector(".referal-history-container").style.width="100%";
-
-}
-
-document.querySelector("#close-history-btn").addEventListener("click",CloseHistory);
-
-function CloseHistory(){
-document.querySelector(".referal-history-container").style.width="0%";
-
-
-}
-
-
-
-
-
 
 
 
@@ -113,3 +95,21 @@ link.value);
 alert("Link copied to clipboard");
 
 }
+
+  
+function share_link(){
+
+  SharingData = document.querySelector("#link").value;
+  
+  SharingTitle = "Join me on Lazerwave to send and receive money seamless.";
+  
+  if (navigator.share){
+    navigator.share({
+        title: SharingTitle,
+        url: SharingData,
+    })
+  }else{
+    alert("opps your device does not support share");
+  }
+  
+  }

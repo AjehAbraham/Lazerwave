@@ -1,131 +1,122 @@
 
-function Open_pin_box(){
-
-    document.querySelector(".Transaction-pin-overlay").style.display = "block";
-    
-    }
-     
-    function CloseTransaction_pin(){
-    
-    document.querySelector(".Transaction-pin-overlay").style.display = "none";
-    
-    }
-    
-    
-    $(document).ready(function (e) {
-          
-          $("#formId").on('submit', (function(e){
-                e.preventDefault();
-            
-          document.querySelector(".loader-overlay").style.display= "block";
-          
-             $.ajax({
-           
-              url: 'Process/Payment-Gateway/Card-Gateway/Block-card',
-          type : 'POST',
-          data: new FormData(this),
-          cache: false,
-          contentType: false,
-          processData: false,
-              success:function(Data){
-          
-            document.querySelector(".loader-overlay").style.display= "none";
-          
-               document.querySelector(".status-message").innerHTML = Data;
-          
-        if(Data == "\r\nsuccess"){
+$(document).ready(function (e) {
         
-          document.querySelector(".status-message").innerHTML = "";
-          //alert("Card created successfully");
-       window.location.reload();
+  $(".form_data").on('submit', (function(e){
+  
+    e.preventDefault();
+    
+  document.querySelector(".loader-overlay").style.display= "block";
+  
+     $.ajax({
+   
+      url: 'Router/view_virtualcard',
+  type : 'POST',
+  data: new FormData(this),
+  cache: false,
+  contentType: false,
+  processData: false,
+      success:function(Data){
+  
+    document.querySelector(".loader-overlay").style.display= "none";
+  
+       document.querySelector(".status_message").innerHTML = Data;
+  
+if(Data != ""){
+
+document.querySelector("#closeCardbtn").addEventListener("click",closeBankcard);
+    function closeBankcard(){
+      document.querySelector(".container-fluid-overlay").style.width= "0%";
+    }
+
+
+
+//FUNCTION TO UNBLOCK AND BLOCK CARD//
+$(document).ready(function (e) {
+  
+  $("#formId").on('submit', (function(e){
+  
+    e.preventDefault();
+    
+  document.querySelector(".loader-overlay").style.display= "block";
+  
+     $.ajax({
+   
+      url: 'Process/Payment-Gateway/Card-Gateway/Block-card',
+  type : 'POST',
+  data: new FormData(this),
+  cache: false,
+  contentType: false,
+  processData: false,
+      success:function(Data){
+  
+    document.querySelector(".loader-overlay").style.display= "none";
+  
+      
+if(Data == "success" || Data == "\r\nsuccess"){
+
+  window.location.reload();
+alert("Card status updated successfuly!");
+
+}else{
+
+alert(Data);
+
+}
+
        
-        
-        }else if(Data == "success"){
-        
-          document.querySelector(".status-message").innerHTML = "";
-      //  alert("Card created successfully");
-       window.location.reload();
-        
-        }
-        
-        
-        
-              },
-              error:function(Data){
-               document.querySelector(".loader-overlay").style.display= "none";
-          
-                document.querySelector(".status-message").innerHTML = Data;
-          
-              }
-            
-             });
-          
-          
-          
-          }));
-          
-          
-            });
-            
+      },
+      error:function(Data){
+       document.querySelector(".loader-overlay").style.display= "none";
+  
+       alert("An error occured,please try again or reload page");
+  
+      }
     
-    
-    
-        function submit_form(event){
-    
-        event.preventDefault();
-        
-        document.querySelector(".loader-overlay").style.display = "block";
-        
-        
-        ////
-        
-        var form = $("#formId");
-        var url = 'Process/Payment-Gateway/Card-Gateway/Block-card';
-        
-        $.ajax ({
-          type: "POST",
-          url: url,
-          data: form.serialize(),
-        dataType:'json',
-        encode: true,
-        success: function(data){
-            //form has beeen submitted//
-        
-            console.log();
-        
-            document.querySelector(".loader-overlay").style.display = "none";
-        
-           
-            var error = document.querySelector(".error_message");
-        
-        error.innerHTML = data.responseText;
-        
-          //  alert("Form submitted successfully");
-        
-          },
-          error: function(data){
-        document.querySelector(".loader-overlay").style.display = "none";
-        
-            var error = document.querySelector(".error_message");
-        
-        error.innerHTML = data.responseText;
-        
-        if(data.responseText == "\r\nsuccess"){
+     });
+  
+  
+  
+  }));
+  
+  
+    });
 
-          error.innerHTML ="";
-        window.location.reload();
+//EMD OF BLOCK AND UNBLOCK BANK CARD//
 
 
-        }else if(data.responseText == "success"){
-          
-          error.innerHTML ="";
-          window.location.reload();
 
-        }
-           
-        
-        }
-        });
+
+}else{
+
+alert("Failed,please try again");
+
+}
+       
+      },
+      error:function(Data){
+       document.querySelector(".loader-overlay").style.display= "none";
+  
+        document.querySelector(".status_message").innerHTML = Data;
+  
+      }
     
-    
-    }
+     });
+  
+  
+  }));
+  
+  
+    });
+
+    //COMPELETE TRASACTION FORM//
+
+    function Open_pin_box(){
+document.querySelector(".Transaction-pin-overlay").style.display = "block";
+}
+
+function CloseTransaction_pin(){
+document.querySelector(".Transaction-pin-overlay").style.display = "none";
+}     
+
+
+

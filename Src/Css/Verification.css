@@ -8,7 +8,7 @@ body{
 .verification-container{
     color: white;
 }
-.verification-container a:link,A:visited{
+.verification-container a:link,a:visited{
 color: #666;
     text-decoration: none;
 }
@@ -46,7 +46,8 @@ cursor: pointer;
 .Dark-mode .form-conatiner input{
 background-color: #f1f1f1;
 }
-.form-container input[type =text],input[type=password],input[type=date],select{
+.form-container input[type =text],.form-container input[type=password],.form-container input[type=date]
+,.form-container select,.form-container input[type=numeric]{
     margin: auto;
     width: 80%;
     font-size: 18px;
@@ -59,11 +60,12 @@ background-color: #f1f1f1;
 }
 
 @media screen and (min-width:600px){
-    .form-container input[type =text],input[type=password],input[type=date],select{
+    .form-container input[type =text],.form-container input[type=password],.form-container input[type=date]
+    ,.form-container select,.form-container input[type=numeric]{
         font-size: 13px;
     }
 }
-.form-container input[type=submit]{
+.form-container input[type=submit],.form-container button{
     margin: auto;
     width: 65%;
     font-size: 15px;
@@ -75,9 +77,7 @@ background-color: #f1f1f1;
 }
 
 @media screen  and(min-width: 600px){
-    
     .form-container input{
-        
         width: 50%;
     }
 }

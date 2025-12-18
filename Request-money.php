@@ -31,24 +31,11 @@ require_once __DIR__.("/sessionPage.php");
 <title>Request Money</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');   
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 </head>
 <body>
-    
-<div class="top-nav">
-
-<span class="material-symbols-outlined"onclick="window.history.back()">arrow_back</span>
-
-<a href="dashboard-home">
-<i class="fa fa-home"></i></a>
-
-</div>
+   
+<?php require_once "default_sidebar.php";?>
 
 <div class="form-container-fluid">
 
@@ -65,15 +52,14 @@ either the username or account number of who you want to send request.</p>
 
 <input type="text" placeholder="Username or Acct no..." name="request" oninput="Verify_username()">
 
-<p class="username_error" style='text-align: center; color: red;'></p>
+<p class="username_error"></p>
 
 <label><b>Amount</b>
 </label>
 <br>
 <input type='number' placeholder='Amount...' name='amount' inputmode='numeric'>
 
-<p style='text-align: center;' class='dataLog' onclick='fecthData()'>Request</p>
-
+<p style=" text-align: center;" class='dataLog' onclick='fecthData()'>Request</p>
 
 </form>
 
@@ -84,7 +70,6 @@ either the username or account number of who you want to send request.</p>
 
 <?php require_once "Loader.php"; 
 
- //include __DIR__.("/logo.php"); 
         require_once __DIR__.("/Non-script.php"); 
         require_once __DIR__.("/Network.php");
         

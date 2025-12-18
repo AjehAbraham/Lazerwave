@@ -34,6 +34,39 @@ if(mysqli_num_rows($Results) > 0){
 
 $hash = rand(9999,99999) .uniqid();
 
+
+//check ifuser account is block or not//
+
+$blockStatus = "SELECT * FROM Block_account WHERE User_id='$_SESSION[New_user]' ORDER BY id DESC LIMIT 1";
+
+$blcokResult = mysqli_query($conn,$blockStatus);
+
+if(mysqli_num_rows($blcokResult) > 0){
+
+
+  $blockUser = mysqli_fetch_assoc($blcokResult);
+
+  if($blockUser["Account_status"] == "Block"){
+
+
+    $BlockStatus = "checked disabled";
+
+  }elseif($blockUser["Account_status"] == "Unblock"){
+
+    $BlockStatus = "disabled ";
+
+  }else{
+
+
+    $BlockStatus = "disabled checked";
+  }
+
+
+}else{
+
+
+  $BlockStatus = "";
+}
 ?>
 
 
@@ -63,49 +96,27 @@ $hash = rand(9999,99999) .uniqid();
 <script src= "https://code.jquery.com/jquery-3.5.0.js"></script>
 
 <!-- end of ajax link -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+ <link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
           
+      <?php require_once "default_sidebar.php";?>
 
         <div class="setting-container">
-           <a href="dashboard-home"> <i class="fa fa-home" style="float:right;
-           margin-top:1px;font-size:11px;"></i>
-</a>
-<span class="material-symbols-outlined" onclick="window.history.back()" style="font-size: 13px;">arrow_back</span>
+          
+        <a href="account-stat"> <p ><i class="fa fa-bar-chart"></i> Account statistic</p></a>
 
-            <!--h1><i class="fa fa-cogs"> </i> Settings</h1-->
+        <p class="Open_acct_limit_btn"><i class="fa fa-object-group"></i> Account Limit</p>
 
-         <a href="Myprofile"><p><i class="fa fa-user-circle" ></i> Profile</p></a>
-           <a href="Transaction-history"> <p><i class="fa fa-book"></i> Transaction history</p></a>
-    
-           <a href="Bank-card"> <p><i class="fa fa-credit-card-alt"></i> Bank card </p></a>
-
-           <a href="account-stat"> <p ><i class="fa fa-bar-chart"></i> Account statistic</p></a>
-
+           <a href="bank-card"> <p><i class="fa fa-credit-card-alt"></i> Bank card </p></a>
             
             <p class="open-security"><i class="fa fa-shield"></i>  Security</p>
 
-           <a href="Verification"> <p><i class="fa fa-user-plus"></i> Verification</p></a>
+           <a href="verification"> <p><i class="fa fa-user-plus"></i> Verification</p></a>
 
-            <p class="Open_payment_btn"><i class="fa fa-share-square-o"></i> Payment link</p>
+           <a href="payment-link-history"><p><i class="fa fa-share-square-o"></i> Payment link</p></a>
             
              <a href="refer-and-earn"><p><i class="fa fa-money"></i>Refer and Earn</p></a>
-
-            
-
-            <p class="Open_acct_limit_btn"><i class="fa fa-object-group"></i> Account Limit</p>
-
-
-
 
             <input type="hidden" value="lazerwave.000webhostapp.com/payment?name=<?php echo $hash;?>&user<?php echo $user['Surname'] .$user['Last_name'].
             $user['First_name'] ?>&id=<?php echo $_SESSION['New_user'] ?>"id="payment-link">
@@ -124,10 +135,9 @@ $hash = rand(9999,99999) .uniqid();
                
         </div>
 
-
-        
 <div class="security-container">
-    <span class="material-symbols-outlined" id="close-security-btn">close</span>
+<h2><i class="fa fa-close" id="close-security-btn"></i></h2>
+
     <h1><i class="fa fa-gear"></i>Security</h1>
 
 <p class="open-transaction-pin"><i class="fa fa-key"></i> Transaction pin </p>
@@ -135,24 +145,35 @@ $hash = rand(9999,99999) .uniqid();
 <p class="open-change-password"><i class="fa fa-lock"></i> Change password </p>
 
 
-<p><a href="block-account"><i class="fa fa-user-times"></i> Block Account </a></p>
+<p class="OpenPin_btn"><i class="fa fa-user-times"></i>
+<label class="switch"><input type="checkbox"  id="blockBox"  <?php echo $BlockStatus; ?> >
+<span class="round slider"></span></label>Block Account</p>
+
 
 <p><i class="fa fa-lock"></i>
 <label class="switch"><input type="checkbox"  id="two-factor_btn" 
 onclick="Two_factor()" <?php echo $FactorStatus; ?> >
 <span class="round slider"></span></label>Two factor  Authentication</p>
+<br>
+</div>
+
+
+<form id="blockForm">
+  <input type='hidden' value='<?php echo $BlockStatus; ?>' name='status'>
+<?php require_once "Transaction-pin-box.php";
+echo "</form>";
+require_once "Loader-refresh.php";
+?>
 
 <form id="Two_factor_Form">
     <input type="text" name="two-factor" style="display: none">
 </form>
 
 
-<i class="two_factor_error_message" style="color: red;text-align; center;"></i><br>
-</div>
-
+<i class="two_factor_error_message" style="color: red;text-align; center;"></i>
 
 <div class="transaction-pin-container">
-    <span class="material-symbols-outlined" id="close_transaction_container_rr">close</span>
+    <i class="fa fa-close" id="close_transaction_container_rr"></i></span>
 
 
 
@@ -199,11 +220,6 @@ inputmode='numeric' style='-webkit-text-security:disc;'  placeholder='your passw
 </form>";
 
 
-
-
-
-
-
 }else{
 
 //USER HAS NOT CREATED YET
@@ -228,10 +244,6 @@ echo "
 </form>";
 
 
-
-
-
-
 }
 
 
@@ -245,7 +257,7 @@ echo "
 <div class="change-password-container">
 
 
-    <span class="material-symbols-outlined" id="close-change-password-btn">close</span>
+    <i class="fa fa-close" id="close-change-password-btn"></i></span>
 
 <h1><i class="fa fa-lock"></i> Change password</h1>
 <br>
@@ -270,19 +282,6 @@ echo "
 
 
 
-
-<div class="payment-link-overlay">
-        <div class="Payment-link-container">
-            <i class="fa fa-close" id="close_payment_btn"></i>
-<br><br>
-        <div class="flex-box">
-            <p class="copy-payment-link"><i class="fa fa-copy"></i> Copy Link</p>
-            <p><a href="create-payment-link" target=" blank"><i class="fa fa-link"></i> Create Link </a></p>
-
-</div>
-</div>
-</div>
-
 <div class="account-limit-overlay-container">
 
 <div class="account-limit-container">
@@ -293,28 +292,17 @@ echo "
 <p>Kyc 1 </p>
       <div class='Kyc1-container'>₦10,000 daily</div>
 
-
       <p>Kyc 2 </p>
       <div class='Kyc2-container'>₦50,000</div>
 
-
-
       <p>Kyc 3 </p>
       <div class='Kyc3-container'>Unlimited</div>
-
-
-
-
 </div>
 </div>
-
-
-
-
 
 
 <div class="report-scam-container">
-    <span class="material-symbols-outlined" id="close-report-container-btn">close</span>
+    <i class="fa fa-close" id="close-report-container-btn"></i></span>
     <h1><i class="fa fa-support"></i> Complain via</h1>
 
     <div class="support">
@@ -325,16 +313,15 @@ echo "
     </div>
 
 </div>
-
   
+
+<script src="Src/Js/settings.js"></script>
+
 <?php require_once "Loader.php"; 
 require_once __DIR__.("/Non-script.php"); 
-//include __DIR__.("/logo.php"); 
         
         require_once __DIR__.("/Network.php");
         
                 ?>
-
-<script src="Src/Js/settings.js"></script>
         </body>
         </html>

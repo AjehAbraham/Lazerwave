@@ -25,7 +25,6 @@ right: 0;
 bottom: 0;
 z-index: 3;
 }
-
 #close-notification-btn{
 color: red;
 font-size: 22px;
@@ -33,7 +32,6 @@ cursor: pointer;
 margin: auto;
 display: block;
 text-align: center;
-
 }
 .Notification-message{
 padding: 7px 7px;
@@ -63,7 +61,7 @@ padding: 8px 8px;
 width: 50%;
 text-align: center;
 margin-left: 5px;
-  background-color: mediumseagreen;
+  background-color: rgb(0,0,56);
   border-radius: 2rem;
   color: white;
   cursor: pointer;

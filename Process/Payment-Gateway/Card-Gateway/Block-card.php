@@ -22,7 +22,7 @@ $reason = filter_var($_POST["reason"],FILTER_SANITIZE_STRING);
 
 }else{
 
-die("Please enter reason");
+die("Please select a valid reason");
 
 
 }

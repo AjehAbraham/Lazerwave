@@ -27,30 +27,14 @@ require_once __DIR__.("/sessionPage.php");
 <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Island+Moments&family=Oswald:wght@200&family=PT+Serif:wght@700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 
 <title>Receive money</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 
-  gtag('config', 'G-03F9WWGK85');
-</script>
 </head>
 <body>
-
+  
+<?php require_once "default_sidebar.php";?>
 <?php 
 require_once __DIR__.("/Network.php");?>
-
-
-<div class="header">
-<span class="material-symbols-outlined" onclick="window.history.back()">arrow_back</span>
-
-<a href="dashboard-home">
-<i class="fa fa-home"></i></a>
-
-</div>
-
 
 <div class="send-money-container-fluid">
 
@@ -62,7 +46,7 @@ require_once __DIR__.("/Network.php");?>
     
     <br>
     
-Account no: <?php echo  $user['Account_no'] ?><br> 
+Account number: <?php echo  $user['Account_no'] ?><br> 
 Bank: Lazerwave
 <br>
 <b id="copy-btn">
@@ -71,15 +55,11 @@ Bank: Lazerwave
 <input type="text" style="display:none" value="<?php echo $user['Account_no']?>"  id="myInput">
 
 
-
-
-
-
 <p><i class="fa fa-credit-card"></i>
- <a href="Top-up">Card top up</a></p>
+ <a href="top-up">Card top up</a></p>
 
 
-<p><i class="fa fa-money"></i>  <a href="Request-money">Request money</a></p>
+<p><i class="fa fa-money"></i>  <a href="request-money">Request money</a></p>
 
 <p><i class="fa fa-link"></i> <a href="create-payment-link" target="blank">Create payment link</a></p>
 

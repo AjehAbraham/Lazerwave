@@ -70,18 +70,9 @@ mysqli_close($conn);
 <script src= "https://code.jquery.com/jquery-3.5.0.js"></script>
 
 <!-- end of ajax link -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
-          
 
       <noscript>
 <div class='noscript'>
@@ -117,9 +108,9 @@ mysqli_close($conn);
 
 <div class="form-container-fluid">
 
-<h2>Finish setting up profile</h2>
+<h2>Finish setting up your profile</h2>
 
-<form id="FormData">
+<form id="FormData" onsubmit="return false">
 
 <label>Surname</label>
 
@@ -145,14 +136,32 @@ Female
 <input type="radio" name="gender" value="Female"></b>
 <br>
 
+<div class="select-type">
+  <b>Choose your Account type</b>
+    <ul>
+      <li>
+        <input type="radio" id="check_1" name="type" value="check_1">
+        <label for="check_1">Current Account</label>
+      </li>
+      <li>
+        <input type="radio" id="check_2" name="type" value="check_2">
+        <label for="check_2">Savings Account</label>
+      </li>
+      <li>
+        <input type="radio" id="check_3" name="type" value="check_3">
+        <label for="check_3">Business Account</label>
+      </li>
+      <li>
+        <input type="radio" id="check_4" name="type" value="check_4">
+        <label for="check_4">Fixed Deposit Account</label>
+      </li>
+    </div>
 
 <b class="error_message"></b>
 <input type="submit" value="create account">
 </form>
 </div>
-    
-
-<br>
+  
 
 <?php require_once "Loader-refresh.php"; ?>
 

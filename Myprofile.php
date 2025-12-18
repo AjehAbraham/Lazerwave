@@ -112,22 +112,17 @@ if (mysqli_num_rows($email_verfiy_result) > 0){
     if ($email_status["Status"] == "verified"){
 
 $EamilSatus ="
-<p class='verify-email' style='background-color: mediumseagreen; cursor: alias;'>Verified <i class='fa fa-check-circle'></i></p>
-
-
-<br>
-<br>
-
+<p class='verify-email' style='background-color: mediumseagreen; cursor: alias;'>
+Verified <i class='fa fa-check-circle'></i></p>
 ";
 
     }else{
 // IF EMAIL IS NOT VEFIRY
 
 $EamilSatus= "
-<p class='verify-email' style='background-color: red;'> Unverified <i class='fa fa-exclamation'></i></p>
+<p class='verify-email' style='background-color: red;'><a href='verification?type='email'> Unverified
+ <i class='fa fa-exclamation'></i></a></p>
 
-<br>
-<br>
 ";
 
 
@@ -138,77 +133,11 @@ $EamilSatus= "
 }else{
 
 $EamilSatus= "
-<p class='verify-email' style='background-color: red;' onclick='open_verify_email()'> Unverified <i class='fa fa-warning'></i></p>
+<p class='verify-email' style='background-color: red;'><a href='verification?type='email'>Unverified 
+<i class='fa fa-warning'></i></a></p>
 
-<br>
-<br>
 ";
-
-
-}
-
-$usr_n ="SELECT * FROM Email_verification WHERE User_id ='$_SESSION[New_user]'";
-
-//$usr_result = $conn -> query($usr_n);
-$usr_result = mysqli_query($conn,$usr_n);
-
-
-if (mysqli_num_rows($usr_result) > 0){
-    
-    //THE USER HAS BEEN VERIFY//
-    $emailVerification = "";
-
-    
-}else{
-    
-    
-    
-    $emailVerification = '
-    
-
-    <div class="verificastion-container-overlay">    
-<div class="verification-container">
-
-<h5 onclick="close_email_verify()"><i class="fa fa-close"></i></h5>
-
-<h5>Verify email</h5>
-
-
-
-<form  id="FormData_request" >
- <input type="hidden" name="otp_no"  value="otp" autofocus="off" class="otp-message">
-
-<h5 class="request_top_btn" onclick="RequestOtp()" id="sendOtp_submitButton" >Request for otp</h5>
-
-<h3 class="request_error_message"></h3>
-
-</form>
-
-<form id="FormData_otp" >
-
-<input type="number" oninput="numeric" maxlenght="6" autofocus="off" name="otp_no"  id="reset_number" placeholder="enter otp" inputmode="numeric" size="30">
-<br>
-
-
-
-<h3 class="Otp_error_message"></h3>
-
-<input type="submit" id="verify_submitButton" value="verify">
-</form>
-
-<h5>Enter otp sent to the email address: <b>'.$user["Email"] .'</b> .</h5>
-
-</div>
-
-</div>
-
-';
-    
-    
-    
-    
-    
-    
+   
 }
 
 
@@ -237,33 +166,16 @@ if (mysqli_num_rows($usr_result) > 0){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <script src= "https://code.jquery.com/jquery-3.5.0.js"></script>
-
-<!-- end of ajax link -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 
 <title>MyProfile</title>
       </head>
       <body>
-
-
-
-      <span class="material-symbols-outlined" onclick="window.history.back()"
-       style="font-size: 13px;">arrow_back</span>
-      <a href="dashboard-home"><i class="fa fa-home" id="Home-btn"></i></a>
-
-</div>
-<br><br>
-        <div class="profile-picture-container">
         
+<?php require_once "default_sidebar.php"; ?>
 
+        <div class="profile-picture-container">
+    
             <img src="<?php echo $dp;?> "style='cursor: pointer;' width="120px"  onclick="open_picture()" id="output">
          <?php echo $uploupBtn; ?>
           
@@ -280,7 +192,7 @@ if (mysqli_num_rows($usr_result) > 0){
 
             <span class="material-symbols-outlined" id="close-upload-btn">close</span>
             <p  style="cursor: pointer;"><label for="file"> <i class="fa fa-photo"></i>Gallary</p>
-            <p  style="cursor: pointer;"><i class="fa fa-camera"></i>Camera </p>
+            <p  style="cursor: pointer;" onclick="alert('Not available')"><i class="fa fa-camera"></i>Camera </p>
           
 
 <h5 class="error_message" style='text-align: center;color: red;margin: auto;'></h5>
@@ -297,7 +209,7 @@ if (mysqli_num_rows($usr_result) > 0){
             <h1>Account Details</h1>
 
             
-            <a href="edit-profile"><h3 class="edit-profile"><i class="fa fa-user-plus"></i>Edit</a></h3>
+            <a href="edit-profile"><h3 class="edit-profile"><i class="fa fa-user-plus"></i> Edit</a></h3>
             
             
             <?php echo $userNames; ?>
@@ -334,20 +246,9 @@ if (mysqli_num_rows($usr_result) > 0){
 
     <label><b>E-mail:</b></label>
  
-
-
     <input type="text"value="<?php echo $user['Email'] ?>" readonly>
    
 <?php  echo $EamilSatus; ?>
-
-
-
-
-
-
-
-<?php echo $emailVerification;?>
-
 
 
 <label><b>Account Number:</b></label>
@@ -361,7 +262,12 @@ if (mysqli_num_rows($usr_result) > 0){
     <b class="copy-account-no" onclick='copyAcct_no()'><i class="fa fa-copy"></i> Copy</b>
  
   <br>
-  <br>
+
+    <h4 class=" More" onclick='see_more()' style="cursor:pointer;border-radius: 2rem;background-color: rgb(0,0,52);">See more...</h4>
+
+<div class="more-infromation">
+
+<br>
    <?php if($user["Country"] === "Nigeria"){
 
     $TelCode = "+234";
@@ -392,11 +298,6 @@ if (mysqli_num_rows($usr_result) > 0){
     <br>
     <input type="text" value="<?php echo  $State ?>" readonly>
     <br>
-
-    <h4 class=" More" onclick='see_more()' style="cursor:pointer;border-radius: 2rem;background-color: rgb(0,0,52);">See more...</h4>
-
-<div class="more-infromation">
-
 <?php
 
 // checking to see user kyc status //
@@ -454,10 +355,10 @@ $DOB = date("F d Y" ,strtotime($get_kyc_result["DOB"]));
 }else{
 $details = '
 <div class="additional-informaton"><p>
-<a href="Verification">Upgrade to KYC 2</a></p>
+<a href="verification">Upgrade to KYC 2</a></p>
 </div>';
 
-    echo "<h3 style='text-align: center;margib: auto;display: block;color: red;'>Please upgrade to KYC2</h3>";
+    echo "<h3 style='text-align: center;margin: auto;display: block;color: red;'>Please upgrade to KYC2</h3>";
 }
 
 

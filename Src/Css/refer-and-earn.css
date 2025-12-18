@@ -1,63 +1,19 @@
 body{
-    
     margin: 0;
     font-size: 13px;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     background-color: white;
-  
-   
 
 }
-
-
-.top-nav-bar i{
-
-font-size: 11px;
-cursor: pointer;
-}
-.top-nav-bar i:nth-child(2){
-float: right;
-margin: 5px;
-
-}
-.top-nav-bar a:link{
-text-decoration: none;
-
-}
-.top-nav-bar a:visited{
-color: #555;
-}
-
-
-/*FOR MOBILE*/
-@media  screen and (min-width: 768px){
-.background-image-fluid{
-display: block;
-}
-
-
-}
-.refer-container-fliud p{
-    color: #555;
-}
-
 .refer-container-fluid{
-
-padding: 9px 9px;
-text-align: center;
-margin: auto;
-border-radius: 2rem;
-box-shadow:0px 16px 8px 0px rgba(0,0,100);
-
-}
-.refer-container-fluid h3:nth-child(1){
-color: red;
-
-
+   margin-left: 12px;
 }
 
+.refer-container-fluid p:nth-child(1){
+   font-size: 19px; 
+   color: rgb(0,0,56);
+   font-weight: bold;
+}
 .refer-container-fluid input[type=submit]{
 padding: 8px 8px;
 background-color: rgb(0,0,100);
@@ -66,121 +22,32 @@ font-size: 15px;
 width: 68%;
 border-radius: 2rem;
 cursor: pointer;
-
+border: none;
 }
-
-/*
-FOR MOBILE*/
-@media  screen and (min-width: 768px) {
-.refer-container-fluid {
-width: 90%; 
-}
-}
-
-
 
 @media  screen and (min-width: 600px){
-.refer-container-fluid {
-
-width: 78%;
-
+.refer-container-fluid input[type=submit]{
+width: 30%;
 }
 
 }
-
-.referal_error_message{
-padding: 5px 5px;
-width: 90%;
-margin: auto;
-border: 2px solid #ccc;
-font-size: 13px;
-border-radius: 2rem;
-}
-
-
-.view-referal{
-background-color: red;
-color: white;
-padding: 7px 7px;
-margin: auto;
-width: 60%;
-text-align: center;
-border-radius: 2rem;
-cursor: pointer;
-}
-.referal-history-container{
-
-position: fixed;
-top: 20%;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: white;
-overflow-y: scroll;
-border-top: 5px solid mediumseagreen;
-border-radius: 2rem;
-transition: 0.3s;
-width: 0%;
+.refer-history-container table{
+width: 100%;
+color: #444;
 text-align: center;
 }
-.referal-history-container p:nth-child(2){
-text-align: center;
-color: rgb(0,0,100);
-font-size: 15px;
-background-color: rgb(0,0,100);
-color: white;
-padding: 5px 5px;
+.refer-history-container th{
 font-weight: bold;
 }
-.referal-history-container p:nth-child(3){
+.refer-history-container tr:nth-child(even){
+background-color: #f1f1f1;
 color: black;
-font-size: 15px;
-font-weight: bold;
 }
-
-.referal-history-container p:nth-child(4){
-font-size: 15px;
-color: red;
+.refer-history-container p:nth-child(1){
+text-align: center;
+font-size: 19px;
 }
-.referal-history-container p:nth-child(5){
-font-size: 15px;
-color: red;
-}
-
-
-#close-history-btn{
-margin: auto;
-display: block;
-cursor: pointer;
-color: red;
-
-}
-
 .Dark-mode {
     background-color: rgb(0,0,20);
     color: white;
-}
-.Dark-mode .refer-container-fliud{
-    background-color: rgb(0,0,20);
-    color: white;
-}
-.Dark-mode .top-nav-bar a:link,a:visited{
-    color: white;
-}
-.Dark-mode span{
-    color: white;
-}
-.Dark-mode i{
-    color: white;
-}
-
-.Dark-mode .referal-history-container{
-    background-color: rgb(0,0,20);
-    color: white;
-}
-.Dark-mode .referal-container i{
-    color: white;
-}
-.Dark-mode .error_message,.refer-container-fluid h3:nth-child(1), .refer-container-fluid p:nth-child(2), .refer-container-fluid p:nth-child(3), .refer-container-fluid h3:nth-child(4), .refer-container-fluid p:nth-child(5), .refer-container-fluid p:nth-child(6){
-    color: white
 }

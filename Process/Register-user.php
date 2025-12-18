@@ -186,6 +186,51 @@ $gender = htmlspecialchars($_POST["gender"]);
 die("Please select a Gender");
 
 }
+
+if(isset($_POST["type"]) && !empty($_POST["type"])){
+
+$Acct_type = htmlspecialchars($_POST["type"]);
+
+$acct_array = ["check_1","check_2","check_3","check_4"];
+
+if(in_array($Acct_type,$acct_array)){
+
+    if($Acct_type == "check_1"){
+
+        $Acct_type = "Current";
+
+    }else if($Acct_type == "check_2"){
+
+$Acct_type = "Savings";
+
+    }else{
+
+if($Acct_type == "check_3"){
+
+    $Acct_type = "Business";
+
+}elseif($Acct_type == "check_4"){
+
+    $Acct_type = "Fixed";
+}else{
+
+    die("Please reload page");
+}
+
+    }
+
+
+}else{
+
+die("Invalid account type,please reload page.");
+
+}
+
+}else{
+
+    die("Please select your account type");
+}
+
 $date =htmlspecialchars(date("Y/m/d"));
 $time =htmlspecialchars(date("H:i:s"));
 $acct_no = rand();
@@ -218,10 +263,10 @@ $acct_no = rand(43129,90563);
 
 
 $insert ="INSERT INTO Register_db(Surname,Last_name,First_name,Country,
-Email,Password,Gender,I_agree,Account_no,Account_balance,Date_reg,Time_reg)
+Email,Password,Gender,I_agree,Account_no,Account_balance,Date_reg,Time_reg,Acct_type)
 
 VALUES('$surname','$last_name','$first_name','$country','$email','$password','$gender',
-'$terms','$acct_no','$acct_bal','$date','$time')
+'$terms','$acct_no','$acct_bal','$date','$time','$Acct_type')
 
 ";
 

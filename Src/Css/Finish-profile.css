@@ -1,9 +1,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        font-size: 13px;
-         
-        
+        font-size: 13px;  
     }
     
     .form-container-fluid{
@@ -91,6 +89,52 @@ cursor: pointer;
     display: block; 
     }
     /*EDIT SELECT OPTION */
+ 
+    .select-type ul{
+      padding: 0;
+      margin: 0;
+      clear: both;
+      
+    }
+    .select-type li{
+      list-style-type: none;
+      list-style-position: outside;
+      padding: 10px;
+    }
+    @media screen and (min-width:600px){
+  
+      .select-type label{
+      width: 60%;
+    }
+    }
+    .select-type input[type="radio"]:not(:checked), 
+    .select-type input[type="radio"]:checked {
+      position: absolute;
+      left: -9999%;
+    }
+    
+    .select-type input[type="radio"] + label {
+      display: inline-block;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid black;
+      color: black;
+      background-color: white;
+      margin-bottom: 10px;
+      border-radius: 2rem;
+      margin: auto;
+      display: block;
+    }
+    .select-type input[type="radio"]:checked + label {
+      border: 1px solid  rgb(0,0,56);
+      color: white;
+      background-color: rgb(0,0,56);
+    }
+    .select-type b{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
     
 .error_message{
     text-align: center;

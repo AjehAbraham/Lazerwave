@@ -28,36 +28,21 @@ require_once __DIR__.("/sessionPage.php");
 <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Island+Moments&family=Oswald:wght@200&family=PT+Serif:wght@700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 
 <title>Refer and Earn</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 </head>
 <body>
 
- 
-<div class="top-nav-bar">
-    <i class="fa fa-cancel" onclick="window.history.back()"></i>
-<a href="dashbaord-home">
-<i class="fa fa-home" style="float: right;"></i></a>
-
-</div>
+<?php require_once "default_sidebar.php"; ?>
 
 <div class="refer-container-fluid">
 
-<h3>Generate Referal Link</h3>
+<p>Generate Referal Link</p>
 
 
 <p>Refer and earn when the person you refer register and uses lazerwave.</p>
 
 
 <?php
-
 
 $current = "SELECT * FROM Refer_and_Earn WHERE User_id='$_SESSION[New_user]' ORDER BY  id DESC LIMIT 1";
    
@@ -93,17 +78,17 @@ $current = "SELECT * FROM Refer_and_Earn WHERE User_id='$_SESSION[New_user]' ORD
 
 echo $currentLink; ?> </p>
 
-<b>Note when you re-generate new link the previous link will be still be valid.</b>
+<p><b style="color: red;">Note when you re-generate new link the previous link will be still be valid.</b></p>
 <input type="text" style="display:none" value="<?php echo $currentLink; ?>" id="link">
 
 
 <?php if(isset($currentLink) && !empty($currentLink)): ?>
 
-<p onclick='CopyLink()'><i class='fa fa-copy' style="cursor: pointer;"></i> Copy link</p>
+<p><b onclick='CopyLink()'><i class='fa fa-copy' style="cursor: pointer;"></i> Copy link </b>
+<b onclick='share_link()'> <i class='fa fa-share' style="cursor: pointer;"></i> Share link</b>
+</p>
 
 <?php endif; ?>
-
-<!--p onclick='share_link()'><i class='fa fa-share'></i> Share link</p-->
 
 
 <form id="FormData">
@@ -115,16 +100,10 @@ echo $currentLink; ?> </p>
 </form>
 <?php require_once "Loader.php"; ?>
 
-<br>
-<p class="view-referal">View history</p>
-
 </div>
 
 
-<div class="referal-history-container">
-
-<i class="fa fa-cancel" id="close-history-btn"></i>
-
+<div class="refer-history-container">
 
 <p>Referal history</p>
 
@@ -135,6 +114,16 @@ $sleect =" SELECT * FROM Refer_and_record WHERE User_id='$_SESSION[New_user]' OR
 $Result = mysqli_query($conn,$sleect);
 
 if(mysqli_num_rows($Result) > 0){
+   
+   echo "
+   <table>
+   
+   <th>Date Created</th>
+   <th>Amount</th>
+   <th>Referal code</th>
+
+   
+   ";
 
 while($ReferData = mysqli_fetch_assoc($Result)){
 
@@ -142,13 +131,16 @@ while($ReferData = mysqli_fetch_assoc($Result)){
 
    $date = date("d D F Y",strtotime($ReferData["Date"]));
 
-   $linkKey = "referal-code: ". $ReferData["Link_key"];
+   $linkKey = $ReferData["Link_key"];
 
-echo "<p style='color: #555;'> $date<br> $amount <b style='float: ;'>$linkKey</b></p>";
-
+echo "
+<tr>
+<td> $date</td>
+<td> $amount</td>
+<td> $linkKey</td></tr>";
 
 }
-
+echo "</table>";
 
 }else{
 

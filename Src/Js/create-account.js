@@ -150,7 +150,106 @@ $(document).ready(function (e) {
         });
   
         //COMPELETE  FORM//
+
+        function passwordReveal(){
   
+          var password = document.querySelector("#passw");
+          var pass2 = document.querySelector("#passw2");
+            
+            if (password.type === "password"){
+            
+            password.type =("text");
+          
+            document.querySelector(".show_passowrd_text").innerHTML="Hide password";
+            
+            }else{
+          
+                password.type =("password");
+             
+               document.querySelector(".show_passowrd_text").innerHTML="Show password";
+            
+            }
+          
+             
+            if (pass2.type == "text"){
+          
+          pass2.type =("password");
+          
+          }else{
+          
+            pass2.type =("text");
+          
+          }
+          
+          }
+          
+          function verifypass(){
+          
+          //CHECK IF PASSWORD REACH THE REQUIREMENT//
+          
+          var myInput = document.querySelector("#passw");
+          var letter= document.querySelector(".check1");
+          // Validate lowercase letters
+          var lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {
+              letter.style.color="mediumseagreen";
+              document.querySelector(".check1").innerHTML='<i class="fa fa-check" id="box1"></i> Lowercase letter';
+            } else {
+              letter.style.color="red";
+              document.querySelector(".check1").innerHTML='<i class="fa fa-close" id="box1"></i> Lowercase letter';
+          }
+          
+          
+          var letter= document.querySelector(".check2");
+          // Validate uppercase letters
+          var upperCaseLetters = /[A-Z]/g;
+            if(myInput.value.match(upperCaseLetters)) {
+              letter.style.color="mediumseagreen";
+              document.querySelector(".check2").innerHTML='<i class="fa fa-check" id="box2"></i>A Capital(Uppercase) letter';
+            } else {
+              letter.style.color="red";
+              document.querySelector(".check2").innerHTML='<i class="fa fa-close" id="box2"></i> A Capital(Uppercase) letter';
+          }
+          
+          
+          var letter= document.querySelector(".check3");
+          // Validate numbers
+          var numbers = /[0-9]/g;
+            if(myInput.value.match(numbers)) {
+              letter.style.color="mediumseagreen";
+              document.querySelector(".check3").innerHTML='<i class="fa fa-check" id="box3"></i> A Number';
+            } else {
+              letter.style.color="red";
+              document.querySelector(".check3").innerHTML='<i class="fa fa-close" id="box3"></i> A Number';
+          }
+          
+          var letter= document.querySelector(".check4");
+            // Validate length
+            if(myInput.value.length >= 8) {
+              letter.style.color="mediumseagreen";
+              document.querySelector(".check4").innerHTML='<i class="fa fa-check" id="box4"></i> A Minimum 8 in length';
+            } else {
+              document.querySelector(".check4").innerHTML='<i class="fa fa-close" id="box4"></i> A Minimum 8 in length';
+              letter.style.color="red";
+          
+            }
+          
+            
+          var letter= document.querySelector(".check5");
+            // Validate special char
+            var specialchar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+            if(myInput.value.match(specialchar)) {
+              letter.style.color="mediumseagreen";
+              document.querySelector(".check5").innerHTML='<i class="fa fa-check" id="box5"></i> At least one special charater';
+            } else {
+              document.querySelector(".check5").innerHTML='<i class="fa fa-close" id="box5"></i> At least one special charater';
+              letter.style.color="red";
+          
+            }
+          
+          
+          }
+            
   
         
   function Checkmode(){

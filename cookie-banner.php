@@ -11,7 +11,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET" && realpath(__FILE__) == $_SERVER['SCRIPT
 
 
 }
-//var_dump($_COOKIE);
 ?>
 <style>
 .cookie-container-overlay{
@@ -21,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET" && realpath(__FILE__) == $_SERVER['SCRIPT
   top: 0;
   bottom: 0;
   background-color: rgba(255,255,255,0.4);
-width:  0%;
+width: 0%;
 z-index: 6;
 transition: 0.3s;
 }
@@ -72,9 +71,8 @@ transition: 0.3s;
 <script>
 function cookieConsent(){
 document.querySelector(".cookie-container-overlay").style.width= "100%";
-
 }
-const teasers = setTimeout(cookieConsent,2000);
+var modalBox = setTimeout(cookieConsent,2000);
 
 document.querySelector(".accept-btn").addEventListener("click",SubmitDataDog);
 function SubmitDataDog(){
@@ -121,5 +119,51 @@ if(data.responseText == "\r\nsuccess"){
 });
 
 }
+//alert(document.cookie);
+/*
+let values = getCookie("modal_box");
+if(values == ""){
 
+  alert("Yo");
+
+}else{
+
+  alert("not set");
+
+}*/
 </script>
+<script>
+  /*
+function check_cookie(){
+
+let Cookie = document.cookie("modal_box");
+
+if(Cookie == ""){
+//cookie has been manipulated//
+  alert("empty");
+
+}else if(Cookie !="" && Cookie == "accept_cookie"){
+//cookie has been accepted so no need to show box
+  alert("Cookie Accepted");
+
+}else{
+
+//cookie has not been set yet
+alert("no cookie has been found");
+}
+
+}
+var box_checker= check_cookie();
+
+function setCookieBox(ModalBox,Cookie_value,exdays){
+
+  const ModalBox = "modal_box";
+  const Cookie_value = "accept_cookie";
+  const Duration = new Date();
+  Duration.setTime(Duration.getTime() + (exdays *24*60* 60 * 1000));
+  let expire = "expire=" + Duration.toUTCString();
+  document.cookie = ModalBox + "=" + Cookie_value + ";" + expire + ";path=/";
+
+}*/
+</script>
+

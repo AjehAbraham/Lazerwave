@@ -62,140 +62,10 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
  echo '₦' .number_format ($user['Account_balance']). '.00' ?>
 " id="UserId">
 
-<script>
-
-  //const test = localStorage.clear();
-
-  
-function AutoChecker(){
-
-
-Bal = document.querySelector("#UserId").value;
-
-
-var Mode = localStorage.getItem("BalStatus");
-
-
-if(Mode === "Hide"){
-
-
-document.querySelector(".Account-balance-p").innerHTML = 
-"<i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><br>";
-
-
-
-}else{
-
-
-document.querySelector(".Account-balance-p").innerHTML = Bal;
-
-
-
-}
-
-}
-//window.onload = AutoChecker();
-
-window.addEventListener("load",AutoChecker)
-
-
-document.querySelector("#balStatus").addEventListener("click",Bal_status);
-function Bal_status(){
-
-
-Bal = document.querySelector("#UserId").value;
-
-
-var Mode = localStorage.getItem("BalStatus");
-
-
-
-if(Mode == "Hide"){
-
-  
-  localStorage.removeItem("BalStatus");
-
-  localStorage.setItem("BalStatus","Show");
-
-}else{
-
-  localStorage.removeItem("BalStatus");
-  
-  localStorage.setItem("BalStatus","Hide");
-
-
-}
-
-
-
-if(Mode == "Hide"){
-
-
-
-  document.querySelector(".Account-balance-p").innerHTML = 
-  "<i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><i class='fa fa-asterisk'></i><br>";
-  
-  
-
-}else{
-
-
-
-  document.querySelector(".Account-balance-p").innerHTML = Bal;
-  
-
-}
-
-
-}
-
-document.querySelector(".open-notify-btn").addEventListener("click",FetchNotification);
-function FetchNotification(){
-
-//event.preventDefault();
-
-document.querySelector(".loader-overlay-refresh").style.display ="block";
-
-var form = $("#DataDoger");
-var url = "Notification";
-
-$.ajax ({
-type: "POST",
-url: url,
-data: form.serialize(),
-dataType:'json',
-encode: true,
-success: function(data){
-//form has beeen submitted//
-
-},
-error: function(data){
-document.querySelector(".loader-overlay-refresh").style.display ="none";
-
-
-
-document.querySelector(".notify_error_message").innerHTML  = data.responseText;   
-}
-});
-
-}
-
-document.querySelector("#close-notification-btn").addEventListener("click",closeNotification);
-
-function closeNotification(){
-
-document.querySelector(".Notifications").style.width="0%";
-
-}
-
-  </script>
-
-
-
 
 <div class="options-container">
 <div class="Send-cash">
-<a href="saved-beneficiary">
+<a href="sendmoney">
 <i class="fa fa-send"></i>
 Transfer</a>
 </div>
@@ -267,10 +137,8 @@ Top Up
 
 require_once __DIR__.("/Network.php");
 
-//require_once "Notification.php";
 require_once "Non-script.php";
 
         ?>
-<!--script src="Src/Js/dashboarD.js"></script-->
 
         

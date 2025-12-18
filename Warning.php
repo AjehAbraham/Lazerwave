@@ -23,13 +23,7 @@
 <title>Page Not Found</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
 
@@ -38,7 +32,7 @@
 
         <p>Page Not Found <i class="fa fa-warning"></i></p>
 
-      <p>The page your are looking for does not exisit or has been moved  &#128532;.</p>
+      <p>The page your are looking for does not exist or has been moved  &#128532;.</p>
       
       
       </div>

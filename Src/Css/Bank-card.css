@@ -1,4 +1,4 @@
-
+     
 body{
     margin: 0;
     font-size: 13px;
@@ -44,9 +44,9 @@ font-size: 13px;
     text-align: center;
   
 }
-@media screen  and(min-width:600px){
+@media screen  and (min-width:600px){
     .saved-cards{
-        width: 70%;
+        width: 60%;
     }
 }
 .saved-cards i{
@@ -62,17 +62,19 @@ font-size: 13px;
 .saved-cards a:visited{
     color: white;
 }
-.saved-cards p:nth-child(4){
+.saved-cards .fetch{
     border-radius: 2rem;
-    /*float: right;*/
+    float: left;
     color: white;
     padding: 6px 6px;
     background-color: rgb(0,0,56);
     width: 40%;
+    cursor: pointer;
+    border: 2px 2px solid rgb(0,0,56);
     /*margin-bottom: 100px;*/
 }
 @media screen and (min-width: 600px){
-        .saved-cards p:nth-child(4){
+        .saved-cards .fetch{
                 width: 20%;
         }
 

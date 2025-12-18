@@ -47,7 +47,7 @@ $link = "https://9paywave.000webhostapp.com/payment-gateway?token_keys=". $resul
 $data = "
 <div class='form-container'>
 <h1>$results[Title] <br> $amounts</h1>
-<p>URL:$link </p> 
+<p>URL:<input type='text' value='$link' disabled style='border-radius: 0px;font-size: 13px;'> </p> 
 
 <p><i class='fa fa-copy' id='copy-link'></i> copy link<br> <br><i class='fa fa-share' id='share-btn'></i> Share link</p>
 
@@ -68,7 +68,7 @@ $data = "
 
 
 <lable><b>Message</b></label><br>
-<textarea cols='10' rows='10' name='message'>$results[Link_message]</textarea>
+<textarea cols='2' rows='2' name='message' placeholder='Type, paste, cut text here...'>$results[Link_message]</textarea>
 <br>
 <p><input type='checkbox' name='status' $check> $status</p>
 <p class='procceed-btn'>Save changes</p>
@@ -118,9 +118,12 @@ exit;
     <meta name="viewport"content="width=device-width,initial-scale=1.0">
           <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         
+  
+          <!-- AJAX -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+<!-- END OF AJAX -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Island+Moments&family=Oswald:wght@200&family=PT+Serif:wght@700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
@@ -129,23 +132,16 @@ exit;
 <script src="https://kit.fontawesome.com/958aace4f6.js" crossorigin="anonymous"></script>
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+<!-- AUTO INCREASE TEXT AREAS SIZE-->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.3.min.js"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!--END OF TEXT AREA -->
 
-  gtag('config', 'G-03F9WWGK85');
-</script>
 <title>Edit Payment Link</title>
-
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
+      <?php require_once "default_sidebar.php"; ?>
 
 
 <?php echo $data; ?>
@@ -161,6 +157,15 @@ echo "</form>";
 require_once "Network.php";
 require_once "Non-script.php"; ?>
 
+<script>
+    
+  $("textarea").each(function () {
+  this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+  }).on("input", function () {
+  this.style.height = 0;
+  this.style.height = (this.scrollHeight) + "px";
+  });
+  </script>
 <script src="Src/Js/edit-link.js"></script>
 
 </body>

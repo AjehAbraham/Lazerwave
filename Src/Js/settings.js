@@ -190,104 +190,77 @@ document.querySelector(".account-limit-overlay-container").style.width="0%";
     }
 
 
-   
+
+    function Darkmode(){
+
+      var darkmode = document.body;
+      
+      
+      darkmode.classList.toggle("Dark-mode"  || "Light-mode");
+      
+      var Theme = localStorage.getItem("Theme");
+      
+      
+      if(Theme  == "Dark-mode"){
+      
+      
+      localStorage.setItem("Theme","Light-mode");
+      
+      var body = document.body;
+      
+      body.classList.add("Light-mode");
+      
+      document.querySelector("#theme").checked=false;
+      
+      }else{
+      
+      
+      localStorage.setItem("Theme","Dark-mode");
+      
+      var body = document.body;
+      
+      
+      
+      body.classList.add("Dark-mode");
+      
+      document.querySelector("#theme").checked=true;
+      
+      
+      }
+      
+      }
+      
+      function Checkmode(){
+      
+      var current_mode = localStorage.getItem("Theme");
+      
+      if(current_mode == "Dark-mode"){
+      
+      
+      var dark = document.body;
+      
+      dark.classList.add("Dark-mode");
+      
+      
+      document.querySelector("#theme").checked= true;
+      
+      
+      }else{
+      
+      var dark = document.body;
+      
+      dark.classList.add("Light-mode");
+      
+      document.querySelector("#theme").checked= false;
+      
+      }
+      
+      
+      }
+      
+      var mode = Checkmode();  
     
 
-
-
-
-
-
-  
-
-function Darkmode(){
-
-var darkmode = document.body;
-
-
-darkmode.classList.toggle("Dark-mode"  || "Light-mode");
-
-
-
-/*
-
-localStorage.setItem("Theme", "Dark-mode");*/
-
-
-var Theme = localStorage.getItem("Theme");
-
-
-if(Theme  == "Dark-mode"){
-
-
-localStorage.setItem("Theme","Light-mode");
-
-
-var body = document.body;
-
-
-
-body.classList.add("Light-mode");
-
-document.querySelector("#theme").checked=false;
-
-
-
-}else{
-
-
-localStorage.setItem("Theme","Dark-mode");
-
-var body = document.body;
-
-
-
-body.classList.add("Dark-mode");
-
-document.querySelector("#theme").checked=true;
-
-
-}
-
-
-
-
-
-}
-
-function Checkmode(){
-
-var current_mode = localStorage.getItem("Theme");
-
-if(current_mode == "Dark-mode"){
-
-
-var dark = document.body;
-
-dark.classList.add("Dark-mode");
-
-
-document.querySelector("#theme").checked= true;
-
-
-}else{
-
-var dark = document.body;
-
-dark.classList.add("Light-mode");
-
-document.querySelector("#theme").checked= false;
-
-
-
-
-}
-
-
-}
-
-var mode = Checkmode();
-  
   
     
 $(document).ready(function (e) {
@@ -510,7 +483,7 @@ alert("Pin Created successfully");
         
           document.querySelector(".two_factor_error_message").innerHTML = "";
         
-        alert("Two Factor ONN successfuly");
+        alert("Two Factor ON successfuly");
         
         document.querySelector("#two-factor_btn").checked = true;
         
@@ -553,3 +526,94 @@ alert("Pin Created successfully");
         }
         
        
+$(document).ready(function (e) {
+    
+  $("#blockForm").on('submit', (function(e){
+  
+  
+    e.preventDefault();
+    
+  document.querySelector(".loader-overlay-refresh").style.display= "block";
+  
+     $.ajax({
+   
+      url: ' Process/block-account',
+  type : 'POST',
+  data: new FormData(this),
+  cache: false,
+  contentType: false,
+  processData: false,
+      success:function(Data){
+  
+    document.querySelector(".loader-overlay-refresh").style.display= "none";
+  
+       document.querySelector(".status-message").innerHTML = Data;
+
+
+       document.querySelector("#blockForm").reset();
+
+       if(Data == "\r\ndisabled"){
+
+        document.querySelector(".status-message").innerHTML = "";
+
+        document.querySelector("#blockBox").checked=true;
+
+        document.querySelector(".Transaction-pin-overlay").style.display = "none";
+
+        alert("Your account has been suspended temporarily");
+
+       }else if(Data == "\r\nBlock"){
+
+        document.querySelector(".status-message").innerHTML = "";
+
+document.querySelector(".Transaction-pin-overlay").style.display = "none";
+
+        
+document.querySelector("#blockBox").checked=true;
+        alert("Your account has been Block successfuly");
+
+       }else{
+
+
+        if(Data == "\r\nUnblock"){
+
+
+        document.querySelector(".status-message").innerHTML = "";
+
+        document.querySelector("#blockBox").checked=false;
+
+document.querySelector(".Transaction-pin-overlay").style.display = "none";
+
+          alert("Your account has been Un-Block");
+
+        }
+       }
+       
+      },
+      error:function(Data){
+       document.querySelector(".loader-overlay-refresh").style.display= "none";
+  
+        document.querySelector(".status-message").innerHTML = Data;
+  
+      }
+    
+     });
+  
+  
+  
+  }));
+  
+  
+    }); 
+document.querySelector(".OpenPin_btn").addEventListener("click",Open_transac);
+function Open_transac(){
+
+document.querySelector(".Transaction-pin-overlay").style.display = "block";
+}
+
+
+document.querySelector("#ClosetBtn").addEventListener("click",Close_transac);
+function Close_transac(){
+
+document.querySelector(".Transaction-pin-overlay").style.display = "none";
+}

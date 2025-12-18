@@ -29,27 +29,11 @@ require_once __DIR__.("/sessionPage.php");
 <script src= "https://code.jquery.com/jquery-3.5.0.js"></script>
 
 <!-- end of ajax link -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
  
-         <div class="Top-nar-bar">
-      <span class="material-symbols-outlined" onclick="window.history.back()">arrow_back</span>
-         
-      <a href="dashboard-home"><i class="fa fa-home"
-></i>
-       </a>
-</div>
-  
+      <?php require_once "default_sidebar.php"; ?>
 
 
 <div class="data-container">

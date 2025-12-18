@@ -32,48 +32,24 @@ require_once "sessionPage.php";
 
 <!--END OF TEXT AREA -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
 <title>Create payment link</title>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 </head>
 <body>
-
-<div class="Top-nav-bar">
-
-<i class="fa fa-cancel" onclick="window.history.back()"></i>
-</div>
-
-<p style="float: right;"><a href="payment-link-history">Payment link history</a></p>
-<br><br>
+<?php require_once "default_sidebar.php"; ?>
 
 <div class="form-container">
 
 <h2>Create payment link</h2>
 
-
  <form id="FormData">
-
-
  <input type="file" name="image"  onchange ="loadFile(event)"style="display:none;" id="file" accept="image">
 
 <p><img id="output">  </p>
 
-
 <p>Add image(optional)</p>
 
-<p>
-
-
-<label for="file">Select Image</lable>
-        
-        </p>
+<p><label for="file">Select Image</lable></p>
         <br>
 <label>Message(optional)</label>
 
@@ -92,23 +68,21 @@ require_once "sessionPage.php";
 
 <br>
 
-
- <label class="switch" >
-  <input type="checkbox" name="terms" value="Yes">
-  <span class="slider round"></span>
-  
-</label>
-<br><br>
-<b >I agree to terms and conditions.<br><a href="#">Terms and condtions</a></b>
+<div class="select-terms-container">
+ <!--label class="switch" id="selector">
+  <input type="checkbox" name="terms" value="Yes" >
+  <span class="slider round" id="selector"></span></label>
 
 
+<br><br-->
+<b><input type="checkbox" name="terms" value="Yes" > I agree to terms and conditions.<br><a href="#"> Terms and condtions</a></b>
 
 <p class="error_message" style='text-align: center;color: red;'></p>
 
 <input type="submit" value="Generate Link">
+</div>
 
 </form>
-
 </div>
 </div>
 

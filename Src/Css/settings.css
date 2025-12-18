@@ -1,44 +1,8 @@
+
 body{
     margin: 0;
     font-size: 13px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.setting-container{
-
-
-}
-.setting-container h1{
-    text-align: center;
-    color: rgb(0,0,180);
-    font-weight: lighter;
-    font-size: 15px;
-}
-.setting-container i{
-    color: green;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.setting-container p{
-    padding: 11px 11px;
-    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
-    background-color: rgb(0,0,56);
-    margin-top: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    overflow: hidden;
-   /* border-top: 2px solid rgb(0,0,180);*/
-    cursor: pointer;
-    color: white;
-}
-@media screen  and (min-width: 600px){
-    
-    
-    .setting-container p{
-        
-        width: 96%;
-    }
-    
 }
 
 .security-container{
@@ -55,7 +19,106 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: 0.3s;
   /*  border-top: 2px solid rgb(0,0,180);*/
 } 
-.security-container i,span{
+.setting-container h1{
+    text-align: center;
+    color: rgb(0,0,180);
+    font-weight: lighter;
+    font-size: 15px;
+}
+.setting-container i{
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.setting-container p{
+    padding: 11px 11px;
+    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+    background-color: rgb(0,0,56);
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    overflow: hidden;
+   /* border-top: 2px solid rgb(0,0,180);*/
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+@media screen  and (min-width: 600px){
+      
+    .setting-container p{ 
+        width: 96%;
+    }
+    
+}
+.setting-container p:nth-child(4) i{
+  margin-left: 5px;
+}
+.setting-container .switch{
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 20px;
+  float: right;
+}
+
+.setting-container .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.setting-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.setting-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.setting-container input:checked + .slider {
+  background-color: rgb(0,0,56);
+}
+.Dark-mode .setting-container input:checked + .slider{
+    background-color: green;
+}
+
+.setting-container input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.setting-container input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.setting-container .slider.round {
+  border-radius: 30px;
+  border: 2px solid #ccc;
+}
+
+.setting-container.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.security-container i{
     cursor: pointer;
     font-weight: bold;
 }
@@ -99,20 +162,85 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 70%;
     text-align: center;
 }
-
-
 .security-container a:link{
     color: white;
-
     text-decoration: none;
 }
-.security-container a:visited{
+.security-container  a:visited{
     color: white;
 }
+.security-container h2 i{
+  color: rgb(0,0,56);
+  text-align: center;
+  margin: auto;
+  display: block;
+}
 .security-container i{
-    color: green;
+    color: white;
 }
 
+.security-container .switch{
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 20px;
+  float: right;
+}
+
+.security-container .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.security-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.security-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.security-container input:checked + .slider {
+  background-color: rgb(0,0,56);
+}
+.Dark-mode .security-container input:checked + .slider{
+    background-color: green;
+}
+
+.security-container input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.security-container input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.security-container .slider.round {
+  border-radius: 30px;
+  border: 2px solid #ccc;
+}
+
+.security-container .slider.round:before {
+  border-radius: 50%;
+}
 
 
 .transaction-pin-container{
@@ -168,7 +296,9 @@ border-radius: 2rem;
         width: 50%;
         font-size: 13px;
     }
-
+    .transaction-pin-container input[type=submit]{
+      width: 50%;
+    }
 }
 
 
@@ -242,76 +372,14 @@ width: 62%;
         font-size: 13px;
     }
 
+    .change-password-container input[type=submit]{
+      width: 50%;
+    }
 }
 
 .change-password-container i{
     margin-right: 10px;
 }
-
-.Payment-link-container{
-    background-color: white;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 80%;
-    border-top: 2px solid ;
-    height: 100%;
-    transition: 0.2s ;
-    position: fixed;
-    text-align: center;
-    width: 0%;
-    overflow-y: scroll;
-    font-size: 13px;
-
-}
-.Payment-link-container i{
-   color: rgb(0,0,70);
-   font-size: 13px;
-}
-
-.flex-box{
-    display: flex;
-    width: 100%;
-    color: white;
-}
-.flex-box p{
-  margin-left: 5px;
-  cursor: pointer;
-}
-.flex-box p:nth-child(1){
-    background-color: rgb(0,0,56);
-    width: 45%;
-    padding: 7px 7px;
-    text-align: center;
-    font-size: 13px;
-   margin: auto;
-}
-
-.flex-box p:nth-child(2){
-    background-color: mediumseagreen;
-    width: 45%;
-    padding: 7px 7px;
-    text-align: center;
-    font-size: 13px;
-  margin: auto;
-}
-.flex-box a:link{
-    color: white;
-}
-.flex-box a:visited{
-    color: white;
-}
-.payment-link-overlay{
-    width: 0%;
-    background-color: rgba(0,0,0,0.2);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-
 
 .account-limit-overlay-container{
     position: fixed;
@@ -411,100 +479,17 @@ text-align: center;
 .report-scam-container h1 i{
     margin-right: 10px;
 }
-a:link{
-    text-decoration: none;
-    color: black;
-}
-a:visited{
-    color: black;
-}
 .delete-account{
     color: red;
 }
 .delete-account i{
     color: red;
 }
-   
-    
-    .switch {
-  position: relative;
-  display: inline-block;
-  width: 42px;
-  height: 20px;
-  float: right;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 10px;
-  width: 10px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-input:checked + .slider {
-  background-color: rgb(0,0,56);
-}
-.Dark-mode input:checked + .slider{
-    background-color: green;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 30px;
-  border: 2px solid #ccc;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-    
-    
     .Dark-mode{
     background-color:rgb(0,0,20);
     color: white;
     
     }
-    .Dark-mode i{
-    color: green;
-    
-    }
-    .Dark-mode span{
-    color: green;
-    
-    }
-    
     .Dark-mode .setting-container p{
   /*  background-color: black;
     color: white;
@@ -512,10 +497,6 @@ input:checked + .slider:before {
     }
     .Dark-mode .setting-container input[type=text],input[type=password],input[type=email],input[type=number],input[type=tel],select{
         background-color: #f1f1f1;
-    }
-    .Dark-mode .setting-container i{
-    color: green;
-    
     }
     .Dark-mode .setting-container  span{
         color: white;
@@ -539,19 +520,14 @@ input:checked + .slider:before {
         color: white;
     }
      .Dark-mode .security-container i{
-     color: green;
-     
+     color: white;
      
      }
       .Dark-mode .security-container  span{
-      
-      color: white;
-      
-      
+      color: white; 
       }
       .Dark-mode .security-container h1{
-          
-          color: white;
+             color: white;
       }
       
       .Dark-mode .security-container  a:link{
@@ -595,10 +571,6 @@ input:checked + .slider:before {
 .Dark-mode .account-limit-overlay-container{
     background-color: rgb(0,0,20);
 }
-    .Dark-mode .Payment-link-container{
-        color: white;
-        background-color: rgb(0,0,20);
-    }
     .Dark-mode .delete-account i{
         color: red;
     }
@@ -607,7 +579,7 @@ input:checked + .slider:before {
         color: red;
     }
     .Dark-mode span{
-        color: green;
+        color: white;
     }  
     
 .Dark-mode .change-password-container h1{
@@ -629,4 +601,7 @@ input:checked + .slider:before {
 }
 .Dark-mode .transaction-pin-container span{
     color: white;
+}
+.Dark-mode .close-security-btn{
+  color: white;
 }

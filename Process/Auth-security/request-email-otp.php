@@ -6,10 +6,8 @@ $_SESSION["Surname"] = $user["Surname"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    //print_r($_POST);
 
-
-        $otp = rand(19872,134920);
+  $otp = rand(19872,134920);
         
   $date = date("Y/m/d H:i:s");
   $time = date("H:i:s");
@@ -190,7 +188,7 @@ if(mysqli_query($conn,$insert)){
 if($mail == TRUE){
 
 
-    die("Otp has been sent to ". $_SESSION["Email"]);
+    die("Otp has been sent.Enter otp sent to <i style='color: red;'>$user['Email']</i>");
     
 }else{
 

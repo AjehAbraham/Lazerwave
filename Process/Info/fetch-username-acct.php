@@ -46,9 +46,9 @@ if($results["User_id"] == $_SESSION["New_user"]){
     $UserDetails = mysqli_fetch_assoc($User);
 
 
-die("<i style='color: white; border-radius: 2rem;padding: 7px 7px;
+die("<b style='color: white; border-radius: 2rem;padding: 7px 7px;
 background-color: rgb(0,0,56);text-align: center; font-size: 13px;'>" . $UserDetails["Surname"] 
-." ". $UserDetails["Last_name"]. " ". $UserDetails["First_name"] ."</i><br>
+." ". $UserDetails["Last_name"]. " ". $UserDetails["First_name"] ."</b><br>
 ");
 
 

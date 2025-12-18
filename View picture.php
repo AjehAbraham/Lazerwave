@@ -5,8 +5,7 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
   header("Location: Warning");
   exit;
 
-     // header('HTTP/1.0 403 Forbiddden',TRUE,403);
-     // die("<h3> 403 Access denied!The file you request for does not exist.</h3>");
+     
 }
 
 ?>
@@ -50,6 +49,14 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
         cursor: pointer;
         font-size: 15px;
     }
+    @media screen and (min-width: 600px){
+      .Profile-picture_container-fluid input[type=submit]{
+                width: 30%;
+              }
+              .Profile-picture_container-fluid label{
+                width: 29%;
+              }
+            }
     .picture{
     
     border: 2px solid white;
@@ -69,7 +76,11 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
     }
     #closeBTN{
         cursor: pointer;
-        font-size: 17px;
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        margin: auto;
+        display: block;
     }
     </style>
     
@@ -78,7 +89,7 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
  
     
     <div class="Profile-picture_container-fluid">
-    <b><i class="fa fa-close" id="closeBTN"></i></b>
+    <p><i class="fa fa-close" id="closeBTN"></i></p>
 
     <div class="picture"><img src="<?php echo  $dp; ?>" id="outputs"></div>
     
@@ -157,6 +168,8 @@ $(document).ready(function (e) {
     alert("Profile picture uploaded successfully");
     window.location.reload();
     
+    }else{
+      alert("An error occured,please try again or select an image");
     }
     
     
@@ -178,8 +191,6 @@ $(document).ready(function (e) {
       
         });
         
-    
-       
     </script>
     
     

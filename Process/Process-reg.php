@@ -16,6 +16,32 @@ htmlspecialchars($email);
 }
 
 
+if(isset($_POST["country"]) && !empty($_POST["country"])){
+
+
+  $country = htmlspecialchars($_POST["country"]);
+  
+  
+  if($country =="Nigeria" || $country == "Ghana"){
+  
+  
+  
+  }else{
+  
+  
+  die("Not Avalaible in your Region ".$country);
+  
+  }
+  
+  
+  }else{
+  
+  die("Please select a country");
+  
+  
+  }
+  
+
 
 $password = htmlspecialchars ($_POST["password"]);
 
@@ -39,31 +65,6 @@ $password = htmlspecialchars($password);
 }
 
 
-
-if(isset($_POST["country"]) && !empty($_POST["country"])){
-
-
-$country = htmlspecialchars($_POST["country"]);
-
-
-if($country =="Nigeria" || $country == "Ghana"){
-
-
-
-}else{
-
-
-die("Not Avalaible in your Region ".$country);
-
-}
-
-
-}else{
-
-die("Please select a country");
-
-
-}
 
 
 if(isset($_POST["terms"])){

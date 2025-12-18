@@ -181,12 +181,12 @@ if(mysqli_query($conn,$insert)){
     echo "
     
 <div class='container-fliud-class'>
-<p>Link created!</p>
+<p style='color: mediumseagreen'>Link created successful!</p>
 <p>URL: <b>$fullPath</b></p>
 <p class='copy-link' onclick='copyLink()' style='color: black;'><i class='fa fa-copy'></i> Copy</p>
 <p class='share-link' onclick='shareLink()' style='color: black;'><i class='fa fa-share'></i> Share</p>
 <br>
-<p class='closeStatus' onclick='HideStatus()'>Done</p>
+<p class='closeStatus' onclick='HideStatus()'>Close</p>
 </div>
 
 <input type='text' value='$fullPath' id='myInput' style='display: none;'>
@@ -196,7 +196,6 @@ if(mysqli_query($conn,$insert)){
     ";
     die();
 
-    //die("success");
 }else{
 
 
@@ -284,12 +283,12 @@ $image_path = $filename;
         echo "
     
         <div class='container-fliud-class'>
-        <p>Link created!</p>
+        <p style='color: mediumseagreen'>Link created successful!</p>
         <p>URL: <b>$fullPath</b></p>
         <p class='copy-link' onclick='copyLink()' style='color: black;'><i class='fa fa-copy'></i> Copy</p>
         <p class='share-link' onclick='shareLink()' style='color: black;'><i class='fa fa-share'></i> Share</p>
         <br>
-        <p class='closeStatus' onclick='HideStatus()'>Done</p>
+        <p class='closeStatus' onclick='HideStatus()'>Close</p>
         </div>
         
         <input type='text' value='$fullPath' id='myInput' style='display: none;'>

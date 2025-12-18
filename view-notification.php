@@ -130,16 +130,8 @@ $info = "
 
 <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
 
-<title>Notification</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Notification</title><link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 
-  gtag('config', 'G-03F9WWGK85');
-</script>
 </head>
 <body>
 

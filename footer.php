@@ -1,5 +1,4 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__)==
 realpath($_SERVER['SCRIPT_FILENAME'])){
   header("Location: Warning");
@@ -11,49 +10,7 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
 ?>
 
 
-
-
-
-
-        <div class="footer-container">
-
-            <div class="sub-footer-container">
-                <p>Blog</p>
-                <p>News</p>
-                <p>Cookie policy</p>
-                <p>Developer</p>
-                <p>About</p>
-                <p>License</p>
-                <p>Promotion</p>
-                <p>Terms and conditions</p>
-                <p>Privacy policy</p>
-            </div>
-
-            <P>Contact: <a href="tel:09074220984">09074220984</a></P>
-            <p>Address: <i>opposite city mart,gwagwalada,Abuja.</i></p>
-
-            <div class="flex">
-            <div class="footer-social-container">
-
-           
-                <a href="https://wa.me/+2349074220984" target=" bkank"><i class="fa fa-whatsapp"></i></a>
-
-            
-                <a href="https://www.twitter.com/AbrahamAjeh" target=" bkank"><i class="fa fa-twitter"></i></a>
-                
-             
-                <a href="mailto:ajehabraham51@yahoo.com" target=" bkank"><i class="fa fa-google"></i></a>
-        
-</div>
-            </div>
-        
-     <p class="footer-date">©2022 -<?php echo date("Y")  ?> </p>
-            <h1><i>All Right Reserve</i></h1>
-            
-            
-        </div>
-
-    <style>
+<style>
 .back-to-top{
     margin-top: 20px;
     margin-bottom: 50px;
@@ -76,6 +33,7 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
     background-color: rgb(0,52,102);
     color: white;
     padding: 10px 10px;
+  
 }
 .footer-container p{
     margin: 10px;
@@ -122,3 +80,45 @@ display: block;
   font-weight: bold;
 }
 </style>
+
+
+
+        <div class="footer-container">
+
+            <div class="sub-footer-container">
+                <p>Blog</p>
+                <p>News</p>
+                <p>Cookie policy</p>
+                <p>Developer</p>
+                <p>About</p>
+                <p>License</p>
+                <p>Promotion</p>
+                <p>Terms and conditions</p>
+                <p>Privacy policy</p>
+            </div>
+
+            <P>Contact: <a href="tel:09074220984">09074220984</a></P>
+            <p>Address: <i>opposite city mart,gwagwalada,Abuja.</i></p>
+
+            <div class="flex">
+            <div class="footer-social-container">
+
+           
+                <a href="https://wa.me/+2349074220984" target=" bkank"><i class="fa fa-whatsapp"></i></a>
+
+            
+                <a href="https://www.twitter.com/AbrahamAjeh" target=" bkank"><i class="fa fa-twitter"></i></a>
+                
+             
+                <a href="mailto:ajehabraham51@yahoo.com" target=" bkank"><i class="fa fa-google"></i></a>
+        
+</div>
+            </div>
+        
+     <p class="footer-date">©2022 -<?php echo date("Y")  ?> </p>
+            <h1><i>All Right Reserve</i></h1>
+            
+            
+        </div>
+
+  

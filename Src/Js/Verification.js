@@ -65,6 +65,53 @@ window.location.href = "Myprofile";
       //COMPELETE TRASACTION FORM//
    
 
+      $(document).ready(function (e) {
+        
+        $(".FormData").on('submit', (function(e){
+        
+          e.preventDefault();
+          
+        document.querySelector(".loader-overlay").style.display= "block";
+        
+           $.ajax({
+         
+            url: 'Process/Auth-security/verify-email-otp',
+        type : 'POST',
+        data: new FormData(this),
+        cache: false,
+        contentType: false,
+        processData: false,
+            success:function(Data){
+        
+          document.querySelector(".loader-overlay").style.display= "none";
+        
+             document.querySelector(".error_message").innerHTML = Data;
+        
+    if(Data == "success" || Data =="\r\nsuccess"){
+    
+    alert("Email verification successful");
+    window.location.href = "Myprofile";
+    
+    }
+    
+             
+            },
+            error:function(Data){
+             document.querySelector(".loader-overlay").style.display= "none";
+        
+             alert("An error occured,please try again or reload page");
+        
+            }
+          
+           });
+        
+        
+        
+        }));
+        
+        
+          });
+
    
 function Checkmode(){
 

@@ -94,72 +94,43 @@ $Usernames = "Chief";
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>    
+ 
 <title>Dashboard</title>
-
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
       </head>
       <body>
 
+
+      <div class="header-container">
+        <img src="Images/logo.JPEG" style="width: 60px;border-radius: 50%;height: 60px">
+    <p><i class="fa fa-bars" id="open-btn"></i></p>
+ </div>
+ <br><br><br><br>
+
+
     <div class="sidebar-container">
-        <i class="fa fa-close" id="close-btn" style="font-size: 21px;color: white;"></i>
-
-      
-
-<?php  //require_once "Flag.php";?>
-
-  <h3>Hi <?php echo $user["Surname"] ?>,welcome back!.</h3>
-
-
 
 <div class="top-nav">
-       <a href="saved-beneficiary"> <p><i class="fa fa-send" style="margin-right: 10px;"></i>
-       <b>Transfer</b></a></p>
-
-       
-       
-        <a href="Myprofile"><p><i class="fa fa-user-plus" style="margin-right: 8px;"></i><b>MyProfile</b></a></p>      
-
-         
-            <a href="setting"> <p><i class="fa fa-cogs" style="margin-right: 15px;"></i><b>Settings</b></a></p>
+  
+<i class="fa fa-close" id="close-btn" style="font-size: 21px;color: white;"></i>
 
 
+  <h3>Hi <?php echo $user["Surname"] ?>,Welcome back!.</h3>
 
-
-  <a href="logout"> <p><i class="fa fa-sign-out" style="margin-right: 15px;"></i> <b>Logout</b></a></p>
-
-
-  <!--a href="About" target='blank'><p><i class="fa fa-support" 
-       style="margin-right: 20px;"></i><b>support</b></a></p-->
+       <p> <a href="sendmoney"> <i class="fa fa-send"></i><b>Transfer</b></a></p>
+       <p><a href="Myprofile"><i class="fa fa-user-plus"></i><b>Profile</b></a></p>      
+       <p><a href="setting"><i class="fa fa-cogs"></i><b>Settings</b></a></p>
+       <p><a href="logout"><i class="fa fa-sign-out"></i> <b>Logout</b></a></p>
+       <p><a href=""><i class="fa fa-exclamation-circle"></i> <b>Get help</b></a></p>
 
 </div>
-
  </div>
-
-
- <div class="header-container">
-<img src="Images/logo.JPEG" 
-     style='width: 40px;height: 40px;border-radius: 50%;'>
-
-    <p style="margin-top: -10px;"><i class="fa fa-bars" id="open-btn"></i></p>
- </div>
-
-</div>
 
 
 
 <?php require_once "dashboard.php"; ?>
-
  
- <script src="Src/Js/header.js"></script>
+ <script src="Src/Js/dashboard.js"></script>
 
 
       </body>

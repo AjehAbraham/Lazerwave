@@ -11,6 +11,31 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
 }
 */
 include __DIR__.("/db_connection.php");
+
+$p = "ALTER TABLE Register_db ADD Acct_type TEXT(10) NOT NULL";
+
+if(mysqli_query($conn,$p)){
+
+}else{
+
+    die("Failed");
+}
+/*
+$key = uniqid(). rand(8392,19283). uniqid().rand();
+
+echo $key;
+
+$p ="INSERT INTO API_keys(User_id,API_key,Status)
+VALUES('1','$key','granted')
+";*/
+
+/*
+$p ="CREATE TABLE API_keys(   
+id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+User_id INT(20) NOT NULL,
+API_key VARCHAR(255) NOT NULL,
+Status TEXT NOT NULL
+)";*/
 /*
 $p ="CREATE TABLE Data_plan(
 
@@ -105,7 +130,7 @@ $p ="INSERT INTO Data_plan(
     ";
 */
 
-
+/*
 $p = "CREATE TABLE Beneficiary(
     id INT(128) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     User_id INT(20) NOT NULL, 
@@ -116,6 +141,7 @@ $p = "CREATE TABLE Beneficiary(
     Ip_addr VARCHAR(30)
     
 )";
+
 
 if( mysqli_query($conn,$p)){
 
@@ -347,9 +373,9 @@ $p = "CREATE TABLE  Register_db(
      I_agree VARCHAR(8) NOT NULL,
      Account_no TEXT NOT NULL,
      Account_balance INT(128) NOT NULL,
-Date_reg TIMESTAMP NOT NULL,
+Date_reg timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
 Time_reg TIME
-
+Acct_type TEXT(10) NOT NULL
     )";
 */
     
@@ -379,7 +405,7 @@ $p = "CREATE TABLE Profile_picture(
 
     User_id INT(20) NOT NULL,
     Image_path VARCHAR(255) NOT NULL,
-    Date_id TIMESTAMP NOT NULL,
+    Date_id timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     Time_id TIME
     
     

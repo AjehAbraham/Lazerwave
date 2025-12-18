@@ -15,7 +15,7 @@ if (isset($_SESSION["New_user"])){
 
     require_once __DIR__.("/db_connection.php");
 
-    require_once "Verfiy login.php";
+    require_once "Router/verify-login.php";
 
     $SQL = "SELECT * FROM Register_db WHERE id = '$_SESSION[New_user]' ";
 
@@ -26,12 +26,6 @@ $user = mysqli_fetch_assoc($result);
 
  
  // CHECK USER LOGIN IF IT IS VALID OR NOT//
- require_once "Daily visitors.php";
- 
- 
- 
- //require_once "Process/Auth-security/Verfiy login.php";
- 
 
 //CHECK IF REMEBER ME SESSION IS SET//
 
@@ -60,9 +54,6 @@ unset($_SESSION["Set_remeber me"]);
  
 
   setcookie($cookie_two_name,$cookie_two_vaLue,time() + 86400 * 7);
-
-
-
 
   $cookie_value = password_hash($cookie_value,PASSWORD_DEFAULT);
 
@@ -103,8 +94,6 @@ require_once __DIR__.("/include username.php");
 
 require_once "create-transaction-pin.php";
 //DAILY VISITORS GET REQUEST//
-
-require_once __DIR__.("/Daily visitors.php");
 
 
 

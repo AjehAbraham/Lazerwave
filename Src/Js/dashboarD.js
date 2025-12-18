@@ -1,8 +1,19 @@
 
-  //const test = localStorage.clear();
+document.getElementById("open-btn").addEventListener("click",openSidebar);
 
-  
-  function AutoChecker(){
+function openSidebar(){
+    
+    document.querySelector(".sidebar-container").style.width = "100%";
+}
+
+document.querySelector("#close-btn").addEventListener("click",CloseSidebar);
+
+function CloseSidebar(){
+
+    document.querySelector(".sidebar-container").style.width = "0%";
+}
+
+function AutoChecker(){
 
 
     Bal = document.querySelector("#UserId").value;
@@ -29,8 +40,9 @@
     }
     
     }
-    window.onload = AutoChecker();
+    //window.onload = AutoChecker();
     
+    window.addEventListener("load",AutoChecker)
     
     
     document.querySelector("#balStatus").addEventListener("click",Bal_status);
@@ -82,3 +94,48 @@
     
     
     }
+    
+    
+document.querySelector(".open-notify-btn").addEventListener("click",FetchNotification);
+function FetchNotification(){
+
+//event.preventDefault();
+
+document.querySelector(".loader-overlay-refresh").style.display ="block";
+
+var form = $("#DataDoger");
+var url = "Notification";
+
+$.ajax ({
+type: "POST",
+url: url,
+data: form.serialize(),
+dataType:'json',
+encode: true,
+success: function(data){
+//form has beeen submitted//
+
+},
+error: function(data){
+document.querySelector(".loader-overlay-refresh").style.display ="none";
+if(data.responseText == ""){
+
+  alert("Failed to fetch Notificatiom");
+  
+}else{
+document.querySelector(".notify_error_message").innerHTML  = data.responseText; 
+}
+
+
+}
+});
+
+}
+
+document.querySelector("#close-notification-btn").addEventListener("click",closeNotification);
+
+function closeNotification(){
+
+document.querySelector(".Notifications").style.width="0%";
+
+}

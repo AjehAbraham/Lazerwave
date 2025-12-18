@@ -17,8 +17,15 @@ realpath($_SERVER['SCRIPT_FILENAME'])){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
+if(isset($_POST["otp_no"])){
 
   $OTP = (int) filter_var($_POST["otp_no"],FILTER_SANITIZE_NUMBER_INT);
+
+}else{
+
+
+  die("Error occrued,please reload page");
+}
 
   $date = date("Y/m/d H:i:s");
   $time = date("H:i:s");
@@ -183,7 +190,6 @@ $OTP_result = mysqli_query($conn,$check_otp);
 
 if(mysqli_num_rows($OTP_result) > 0){
 
-
 $UserOtp = mysqli_fetch_assoc($OTP_result);
 
 //CHECK IF USER HAS USED OTP//
@@ -211,7 +217,7 @@ VALUES('$_SESSION[New_user]','$status','$date','$time')
 
 if(mysqli_query($conn,$INSERT)){
 
-
+  die("success");
   $to =$_SESSION["Email"] ;
   $subject = "Email Verification";
   $headers = "From:Lazewave.com \r\n";

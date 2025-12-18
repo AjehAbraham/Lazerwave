@@ -26,27 +26,11 @@ require_once __DIR__.("/sessionPage.php");
 <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Island+Moments&family=Oswald:wght@200&family=PT+Serif:wght@700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 
 <title>Card top up</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 
-  gtag('config', 'G-03F9WWGK85');
-</script>
 </head>
 <body>
 
-
-<div class="top-nav">
-
-<span class="material-symbols-outlined"onclick="window.history.back()" >arrow_back</span>
-
-<a href="dashboard-home">
-<i class="fa fa-home"></i></a>
-
-</div>
 
 <div class="form-container">
 

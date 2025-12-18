@@ -31,19 +31,11 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
 
 <title>Payment Gateway</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03F9WWGK85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-03F9WWGK85');
-</script>
+<link rel="icon" type="image/jpeg" href="Images/logo.JPEG"/>
 </head>
 <body>
     
-  
+<?php require_once "default_sidebar.php"?>  
 <noscript>
 <div class='noscript'>
     <p> <i class="fa fa-warning"></i> Your browser doesn't support JavaScript or javascript appear to have been turn off,please go to your browser setting to turn javascript ON.</p>
@@ -70,13 +62,6 @@ session_start();
       </style>
       
     </noscript>
-
-
-<div class="Top_nav_bar"> 
-<a href='dashboard-home' target="blank">
-
-<i class='fa fa-home'></i></a>
-</div>
 
 
 <?php
@@ -251,7 +236,7 @@ echo "<p style='text-align: center;color: red;font-weight: bold;'>Your link appe
 require_once "Loader-refresh.php";
 
 require_once "Network.php";
-mysqli_close($conn);
+//mysqli_close($conn);
  
 }else{
 
